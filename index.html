@@ -31,7 +31,6 @@
     a { text-decoration: none; color: inherit; }
     img { display: block; max-width: 100%; }
 
-    /* ── UTILITY ── */
     .container { max-width: 1080px; margin: 0 auto; padding: 0 5%; }
     .section-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--emerald); margin-bottom: 0.5rem; }
     .section-heading { font-size: clamp(1.65rem, 3.5vw, 2.25rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 0.9rem; letter-spacing: -0.02em; }
@@ -39,25 +38,14 @@
     .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fade-up.visible { opacity: 1; transform: none; }
 
-    /* ── BUTTONS ── */
     .btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.82rem 1.8rem; border-radius: 7px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; cursor: pointer; }
-    .btn-green { background: var(--emerald); color: var(--white); box-shadow: 0 3px 16px rgba(16,185,129,0.35); }
-    .btn-green:hover { background: var(--emerald-dark); transform: translateY(-1px); }
     .btn-navy { background: var(--navy); color: var(--white); }
     .btn-navy:hover { background: var(--navy-dark); transform: translateY(-1px); }
-    .btn-outline { border: 2px solid var(--navy); color: var(--navy); background: transparent; }
-    .btn-outline:hover { background: var(--navy); color: var(--white); }
     .btn-white { background: var(--white); color: var(--navy); box-shadow: 0 3px 20px rgba(0,0,0,0.15); font-weight: 700; }
     .btn-white:hover { background: #F0FDF9; transform: translateY(-1px); }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      height: 66px; padding: 0 5%;
-      display: flex; align-items: center; justify-content: space-between;
-    }
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); height: 66px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; }
     .nav-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.2rem; color: var(--navy); }
     .nav-brand span { color: var(--emerald); }
     .nav-links { display: flex; align-items: center; gap: 2rem; }
@@ -68,14 +56,8 @@
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
 
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(155deg, #162d75 0%, #1E3A8A 45%, #1a4ea8 100%);
-      display: flex; align-items: center;
-      padding: 110px 5% 70px;
-      position: relative; overflow: hidden;
-    }
+    /* HERO */
+    .hero { min-height: 100vh; background: linear-gradient(155deg, #162d75 0%, #1E3A8A 45%, #1a4ea8 100%); display: flex; align-items: center; padding: 110px 5% 70px; position: relative; overflow: hidden; }
     .hero-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
     .hero-tag { display: inline-block; background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.35); color: #6EE7B7; border-radius: 4px; padding: 0.3rem 0.75rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.4rem; }
     .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--white); line-height: 1.12; margin-bottom: 1.2rem; letter-spacing: -0.025em; }
@@ -96,12 +78,12 @@
     .hero-stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.4rem; color: var(--emerald); }
     .hero-stat-label { font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-top: 0.1rem; line-height: 1.3; }
 
-    /* ── CERT BAR ── */
+    /* CERT BAR */
     .cert-bar { background: var(--charcoal); padding: 0.9rem 5%; display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
     .cert-bar-item { font-size: 0.8rem; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.5rem; font-weight: 500; }
     .cert-bar-item::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
 
-    /* ── PROBLEMS ── */
+    /* PROBLEMS */
     .problems { padding: 90px 5%; background: var(--light-bg); }
     .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem; }
     .problem-list { display: flex; flex-direction: column; gap: 1rem; }
@@ -113,7 +95,7 @@
     .problems-callout h3 { font-size: 1.2rem; margin-bottom: 0.8rem; line-height: 1.4; }
     .problems-callout p { font-size: 0.9rem; color: rgba(255,255,255,0.78); line-height: 1.7; margin-bottom: 1.5rem; }
 
-    /* ── PROCESS ── */
+    /* PROCESS */
     .process { padding: 90px 5%; background: var(--white); }
     .process-intro { max-width: 600px; margin-bottom: 3.5rem; }
     .process-steps { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; position: relative; }
@@ -127,7 +109,7 @@
     .process-step h4 { font-size: 0.82rem; color: var(--navy); margin-bottom: 0.3rem; text-align: center; line-height: 1.3; }
     .process-step p { font-size: 0.74rem; color: var(--slate); line-height: 1.5; text-align: center; }
 
-    /* ── SERVICES ── */
+    /* SERVICES */
     .services { padding: 90px 5%; background: var(--light-bg); }
     .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 3rem; }
     .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 13px; padding: 1.8rem; transition: all 0.25s; position: relative; overflow: hidden; }
@@ -157,7 +139,7 @@
     .svc-cta.outline { border: 1.5px solid var(--navy); color: var(--navy); }
     .svc-cta.outline:hover { background: var(--navy); color: var(--white); }
 
-    /* ── TIMEZONE ── */
+    /* TIMEZONE */
     .timezone { padding: 90px 5%; background: var(--navy); color: var(--white); }
     .timezone .section-heading { color: var(--white); }
     .timezone .section-body { color: rgba(255,255,255,0.65); }
@@ -173,7 +155,7 @@
     .tz-list li { font-size: 0.83rem; color: rgba(255,255,255,0.65); display: flex; gap: 0.5rem; align-items: flex-start; line-height: 1.5; }
     .tz-list li::before { content: '→'; color: var(--emerald); flex-shrink: 0; }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     .about { padding: 90px 5%; background: var(--light-bg); }
     .about-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 4.5rem; align-items: start; }
     .about-photo-wrap { position: relative; }
@@ -188,7 +170,38 @@
 
     /* ── PRICING ── */
     .pricing { padding: 90px 5%; background: var(--white); }
-    .pricing-intro { max-width: 560px; margin-bottom: 3.5rem; }
+    .pricing-intro { max-width: 580px; margin-bottom: 3rem; }
+
+    /* First-month offer banner */
+    .first-month-banner {
+      background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 10px;
+      padding: 1.1rem 1.6rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .fmb-badge {
+      background: var(--emerald);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .fmb-text {
+      font-size: 0.88rem;
+      color: #065F46;
+      line-height: 1.5;
+    }
+    .fmb-text strong { font-weight: 700; }
+
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
     .plan { display: flex; flex-direction: column; border-right: 1px solid var(--border); }
     .plan:last-child { border-right: none; }
@@ -201,11 +214,37 @@
     .plan.scale .plan-tier-label { color: rgba(255,255,255,0.55); }
     .plan-name { font-size: 1.3rem; font-weight: 900; color: var(--navy); margin-bottom: 0.3rem; }
     .plan.scale .plan-name { color: var(--white); }
-    .plan-amount { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--navy); line-height: 1; margin-bottom: 0.2rem; }
+
+    /* Pricing display with first-month offer */
+    .plan-price-row { margin-bottom: 0.2rem; }
+    .plan-amount { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--navy); line-height: 1; }
     .plan.scale .plan-amount { color: var(--white); }
     .plan-amount sup { font-size: 1rem; vertical-align: top; margin-top: 0.45rem; display: inline-block; }
     .plan-amount sub { font-size: 0.8rem; font-weight: 500; color: var(--slate); }
     .plan.scale .plan-amount sub { color: rgba(255,255,255,0.55); }
+    .plan-first-month {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0.5rem;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 5px;
+      padding: 0.25rem 0.6rem;
+      width: fit-content;
+    }
+    .plan.scale .plan-first-month {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .plan-first-month-label { font-size: 0.68rem; color: var(--emerald-dark); font-weight: 600; }
+    .plan.scale .plan-first-month-label { color: rgba(255,255,255,0.7); }
+    .plan-first-month-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.88rem; color: var(--emerald-dark); }
+    .plan.scale .plan-first-month-price { color: #6EE7B7; }
+    .plan-first-month-then { font-size: 0.65rem; color: var(--slate); }
+    .plan.scale .plan-first-month-then { color: rgba(255,255,255,0.45); }
+
     .plan-volume { font-size: 0.76rem; color: var(--slate); margin-bottom: 0.7rem; font-weight: 500; }
     .plan.scale .plan-volume { color: rgba(255,255,255,0.6); }
     .plan-desc { font-size: 0.79rem; color: var(--slate); line-height: 1.5; padding-top: 0.7rem; border-top: 1px solid var(--border-dark); }
@@ -229,8 +268,74 @@
     .plan-footer-note { font-size: 0.72rem; color: var(--slate-light); text-align: center; margin-top: 0.7rem; line-height: 1.45; }
     .plan.scale .plan-footer-note { color: rgba(255,255,255,0.35); }
 
-    /* ── CONTACT ── */
-    .contact { padding: 90px 5%; background: var(--light-bg); }
+    /* ── FAQ ── */
+    .faq { padding: 90px 5%; background: var(--light-bg); }
+    .faq-intro { max-width: 560px; margin-bottom: 3rem; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .faq-item:hover { box-shadow: 0 3px 16px rgba(30,58,138,0.08); }
+    .faq-item.full-width { grid-column: 1 / -1; }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.3rem 1.5rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .faq-q-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      transition: transform 0.25s, background 0.2s;
+      font-size: 0.65rem;
+      color: var(--slate);
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+      background: var(--emerald);
+      color: var(--white);
+      border-color: var(--emerald);
+    }
+    .faq-a {
+      display: none;
+      padding: 0 1.5rem 1.3rem;
+      font-size: 0.86rem;
+      color: var(--slate);
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+    }
+    .faq-item.open .faq-a { display: block; }
+    .faq-a strong { color: var(--charcoal); font-weight: 600; }
+    .faq-cta { margin-top: 2.5rem; text-align: center; }
+    .faq-cta p { font-size: 0.9rem; color: var(--slate); margin-bottom: 1rem; }
+
+    /* CONTACT */
+    .contact { padding: 90px 5%; background: var(--white); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; margin-top: 3rem; align-items: start; }
     .contact-options { display: flex; flex-direction: column; gap: 1rem; }
     .contact-option { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem 1.6rem; display: flex; align-items: flex-start; gap: 1rem; transition: box-shadow 0.2s; }
@@ -245,7 +350,7 @@
     .contact-cta-panel > p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 1.6rem; }
     .availability { font-size: 0.74rem; color: rgba(255,255,255,0.4); text-align: center; margin-top: 0.8rem; }
 
-    /* ── CREDENTIALS ── */
+    /* CREDENTIALS */
     .creds-section { background: var(--white); padding: 50px 5%; border-top: 1px solid var(--border); }
     .creds-inner { max-width: 1080px; margin: 0 auto; }
     .creds-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-light); text-align: center; margin-bottom: 1.8rem; }
@@ -255,7 +360,7 @@
     .cred-item img { width: 90px; height: 90px; object-fit: contain; border-radius: 6px; }
     .cred-name { font-size: 0.7rem; font-weight: 600; color: var(--slate); text-align: center; max-width: 110px; line-height: 1.35; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { background: var(--charcoal); color: rgba(255,255,255,0.6); padding: 2.8rem 5% 2rem; }
     .footer-inner { max-width: 1080px; margin: 0 auto; }
     .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2rem; }
@@ -269,7 +374,7 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
     .footer-bottom p { font-size: 0.76rem; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 960px) {
       .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .hero-right { display: none; }
@@ -282,6 +387,8 @@
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-photo-wrap { max-width: 280px; }
       .services-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .faq-item.full-width { grid-column: auto; }
     }
     @media (max-width: 768px) {
       nav { padding: 0 4%; }
@@ -290,10 +397,11 @@
       .hamburger { display: flex; }
       .problems-grid, .timezone-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-      section, .problems, .process, .services, .timezone, .about, .pricing, .contact { padding: 60px 4%; }
+      section, .problems, .process, .services, .timezone, .about, .pricing, .contact, .faq { padding: 60px 4%; }
       .creds-row { gap: 0.8rem; }
       .cred-item { min-width: 110px; padding: 1rem; }
       .cred-item img { width: 72px; height: 72px; }
+      .first-month-banner { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
     }
     @media (max-width: 480px) {
       .process-steps { grid-template-columns: 1fr; }
@@ -304,7 +412,7 @@
 </head>
 <body>
 
-<!-- ═══ NAVBAR ═══ -->
+<!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-brand">Ecom<span>Keeping</span></div>
   <div class="nav-links" id="navLinks">
@@ -319,7 +427,7 @@
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-grid">
     <div class="hero-left">
@@ -335,55 +443,33 @@
         <p class="hero-cta-sub">If we're a good fit, we'll review your books for free before you commit to anything.</p>
       </div>
     </div>
-
     <div class="hero-right">
       <div class="hero-right-label">How we start</div>
       <h3>We begin with a free review of your books.</h3>
       <p>Before you spend anything, we go through your QuickBooks file, identify what's wrong, and send you a written report showing exactly what each issue costs you. No obligation to continue.</p>
       <div class="audit-steps">
-        <div class="audit-step">
-          <div class="step-dot">1</div>
-          <span>30-minute call to understand your business and current setup</span>
-        </div>
-        <div class="audit-step">
-          <div class="step-dot">2</div>
-          <span>Read-only access to your QuickBooks file — we review 8 specific areas</span>
-        </div>
-        <div class="audit-step">
-          <div class="step-dot">3</div>
-          <span>Written findings report with your actual account names and dollar impact — within 24 hours</span>
-        </div>
+        <div class="audit-step"><div class="step-dot">1</div><span>30-minute call to understand your business and current setup</span></div>
+        <div class="audit-step"><div class="step-dot">2</div><span>Read-only access to your QuickBooks file — we review 8 specific areas</span></div>
+        <div class="audit-step"><div class="step-dot">3</div><span>Written findings report with your actual account names and dollar impact — within 24 hours</span></div>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-num">A2X</div>
-          <div class="hero-stat-label">Certified Bookkeeper</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">QBO</div>
-          <div class="hero-stat-label">ProAdvisor</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">5th</div>
-          <div class="hero-stat-label">Monthly delivery</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">8–2</div>
-          <div class="hero-stat-label">Available EDT</div>
-        </div>
+        <div class="hero-stat"><div class="hero-stat-num">A2X</div><div class="hero-stat-label">Certified Bookkeeper</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">QBO</div><div class="hero-stat-label">ProAdvisor</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">5th</div><div class="hero-stat-label">Monthly delivery</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">8–2</div><div class="hero-stat-label">Available EDT</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CERT BAR ═══ -->
+<!-- CERT BAR -->
 <div class="cert-bar">
   <div class="cert-bar-item">Intuit Certified Bookkeeper</div>
   <div class="cert-bar-item">QuickBooks Online ProAdvisor</div>
   <div class="cert-bar-item">A2X Certified E-commerce Bookkeeper</div>
 </div>
 
-<!-- ═══ PROBLEMS ═══ -->
+<!-- PROBLEMS -->
 <section class="problems" id="problems">
   <div class="container">
     <div class="problems-grid">
@@ -430,7 +516,7 @@
   </div>
 </section>
 
-<!-- ═══ PROCESS ═══ -->
+<!-- PROCESS -->
 <section class="process" id="process">
   <div class="container">
     <div class="process-intro">
@@ -440,53 +526,37 @@
     </div>
     <div class="process-steps fade-up">
       <div class="process-step">
-        <div class="step-circle-wrap" style="position:relative;">
-          <div class="step-circle navy">1</div>
-        </div>
+        <div class="step-circle-wrap" style="position:relative;"><div class="step-circle navy">1</div></div>
         <h4>Schedule a call</h4>
         <p>30 minutes. We talk about your platforms, current setup, and what's frustrating you.</p>
       </div>
       <div class="process-step">
-        <div class="step-circle-wrap" style="position:relative;">
-          <div class="step-circle green">2</div>
-          <span class="free-tag-step">FREE</span>
-        </div>
+        <div class="step-circle-wrap" style="position:relative;"><div class="step-circle green">2</div><span class="free-tag-step">FREE</span></div>
         <h4>We offer a free audit</h4>
         <p>At the end of the call, if we're a good fit, we offer to review your books at no cost.</p>
       </div>
       <div class="process-step">
-        <div class="step-circle-wrap" style="position:relative;">
-          <div class="step-circle green">3</div>
-          <span class="free-tag-step">FREE</span>
-        </div>
+        <div class="step-circle-wrap" style="position:relative;"><div class="step-circle green">3</div><span class="free-tag-step">FREE</span></div>
         <h4>We review your QBO</h4>
         <p>Read-only access. We work through 8 areas in 45–90 minutes — documenting, not fixing.</p>
       </div>
       <div class="process-step">
-        <div class="step-circle-wrap">
-          <div class="step-circle navy">4</div>
-        </div>
+        <div class="step-circle-wrap"><div class="step-circle navy">4</div></div>
         <h4>You receive findings</h4>
         <p>Written report within 24 hours — your account names, specific errors, dollar impact.</p>
       </div>
       <div class="process-step">
-        <div class="step-circle-wrap">
-          <div class="step-circle navy">5</div>
-        </div>
+        <div class="step-circle-wrap"><div class="step-circle navy">5</div></div>
         <h4>Review the proposal</h4>
         <p>If you want us to fix it, we send a clear proposal — scope, timeline, flat monthly rate.</p>
       </div>
       <div class="process-step">
-        <div class="step-circle-wrap">
-          <div class="step-circle navy">6</div>
-        </div>
+        <div class="step-circle-wrap"><div class="step-circle navy">6</div></div>
         <h4>Onboarding &amp; setup</h4>
         <p>QBO configured for e-commerce. A2X connected and tested before we start.</p>
       </div>
       <div class="process-step">
-        <div class="step-circle-wrap">
-          <div class="step-circle navy">7</div>
-        </div>
+        <div class="step-circle-wrap"><div class="step-circle navy">7</div></div>
         <h4>Clean books monthly</h4>
         <p>Financials by the 5th, or next business day. You run the business — we handle the numbers.</p>
       </div>
@@ -494,14 +564,13 @@
   </div>
 </section>
 
-<!-- ═══ SERVICES ═══ -->
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <div class="section-eyebrow fade-up">What we do</div>
     <h2 class="section-heading fade-up">E-commerce bookkeeping services</h2>
     <p class="section-body fade-up">Built for Amazon FBA and Shopify from the start — not adapted from general accounting practice.</p>
     <div class="services-grid">
-
       <div class="service-card audit-card fade-up">
         <div class="svc-icon green">&#128269;</div>
         <div class="svc-free-tag">Free — No Obligation</div>
@@ -518,7 +587,6 @@
         </ul>
         <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="svc-cta green">Schedule a call to discuss</a>
       </div>
-
       <div class="service-card monthly-card fade-up">
         <div class="svc-icon blue">&#128200;</div>
         <h3>Monthly Bookkeeping</h3>
@@ -535,7 +603,6 @@
         </ul>
         <a href="#pricing" class="svc-cta navy">See pricing</a>
       </div>
-
       <div class="service-card cleanup-card fade-up">
         <div class="svc-icon purple">&#128295;</div>
         <h3>Cleanup &amp; Catch-Up</h3>
@@ -549,7 +616,6 @@
         </ul>
         <a href="mailto:emmanuel@ecomkeeping.com" class="svc-cta outline">Get a quote</a>
       </div>
-
       <div class="service-card setup-card fade-up">
         <div class="svc-icon amber">&#9881;</div>
         <h3>QuickBooks Online + A2X Setup</h3>
@@ -563,12 +629,11 @@
         </ul>
         <a href="mailto:emmanuel@ecomkeeping.com" class="svc-cta outline">Get a quote</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══ TIMEZONE ═══ -->
+<!-- TIMEZONE -->
 <section class="timezone" id="advantage">
   <div class="container">
     <div class="section-eyebrow fade-up">Why the timezone matters</div>
@@ -576,11 +641,7 @@
     <p class="section-body fade-up">EcomKeeping operates from Lagos, Nigeria — 5 hours ahead of US Eastern time. That gap is a deliberate structural advantage for every client on US hours.</p>
     <div class="timezone-grid">
       <div class="tz-card fade-up">
-        <div class="tz-times">
-          <div class="tz-badge edt">4 AM – 7 AM EDT</div>
-          <div class="tz-sep">/</div>
-          <div class="tz-badge lagos">9 AM – 12 PM Lagos</div>
-        </div>
+        <div class="tz-times"><div class="tz-badge edt">4 AM – 7 AM EDT</div><div class="tz-sep">/</div><div class="tz-badge lagos">9 AM – 12 PM Lagos</div></div>
         <h4>Overnight reconciliation window</h4>
         <ul class="tz-list">
           <li>Previous day's Amazon settlements reconciled and recorded</li>
@@ -590,11 +651,7 @@
         </ul>
       </div>
       <div class="tz-card fade-up">
-        <div class="tz-times">
-          <div class="tz-badge edt">8 AM – 2 PM EDT</div>
-          <div class="tz-sep">/</div>
-          <div class="tz-badge lagos">1 PM – 7 PM Lagos</div>
-        </div>
+        <div class="tz-times"><div class="tz-badge edt">8 AM – 2 PM EDT</div><div class="tz-sep">/</div><div class="tz-badge lagos">1 PM – 7 PM Lagos</div></div>
         <h4>US business hours support</h4>
         <ul class="tz-list">
           <li>Available for scheduled calls and questions during your morning</li>
@@ -608,49 +665,21 @@
   </div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-photo-wrap fade-up">
-        <img
-          src="Emmanuel_EcomKeeping.png"
-          alt="Emmanuel Akam — EcomKeeping"
-          class="about-photo"
-        />
-        <div class="about-cert-float">
-          <div class="about-cert-dot"></div>
-          <span>A2X Certified E-commerce Bookkeeper</span>
-        </div>
+        <img src="Emmanuel_EcomKeeping.png" alt="Emmanuel Akam — EcomKeeping" class="about-photo" />
+        <div class="about-cert-float"><div class="about-cert-dot"></div><span>A2X Certified E-commerce Bookkeeper</span></div>
       </div>
       <div class="about-text">
         <div class="section-eyebrow fade-up">Who's behind this</div>
         <h2 class="section-heading fade-up">I built this practice around e-commerce from the beginning — not as an afterthought.</h2>
-        <p class="fade-up">
-          I am Emmanuel, and I created EcomKeeping because I was looking for the intersection
-          of three things I genuinely love: accounting, teaching, and working with people who
-          sell online. I am not a general bookkeeper who adapted to e-commerce. I built this
-          practice around e-commerce from the very beginning.
-        </p>
-        <p class="fade-up">
-          I studied the seller side from the ground up — Amazon settlements, Shopify payouts,
-          FBA fee structures, COGS for inventory businesses, and US sales tax nexus as a
-          complete and interconnected system. I chose to specialize because I have no interest
-          in competing against generalists on price or volume. My focus is narrow on purpose
-          so the expertise runs deep.
-        </p>
-        <p class="fade-up">
-          My Lagos timezone is not a limitation. It means I am reconciling your previous
-          day's transactions in my morning while you sleep, so your books are ready before
-          you start work. I want to serve 10 to 14 sellers well for years, not hundreds of
-          clients at arm's length. That is what EcomKeeping is built to be.
-        </p>
-        <p class="fade-up">
-          I am transparent about where I am: a few months into this niche, but with real
-          credentials — A2X Certified, Intuit Bookkeeping Certified, and QBO ProAdvisor,
-          all trained specifically with e-commerce application in mind. I know your platform,
-          I know your tools, and I will know your business.
-        </p>
+        <p class="fade-up">I am Emmanuel, and I created EcomKeeping because I was looking for the intersection of three things I genuinely love: accounting, teaching, and working with people who sell online. I am not a general bookkeeper who adapted to e-commerce. I built this practice around e-commerce from the very beginning.</p>
+        <p class="fade-up">I studied the seller side from the ground up — Amazon settlements, Shopify payouts, FBA fee structures, COGS for inventory businesses, and US sales tax nexus as a complete and interconnected system. I chose to specialize because I have no interest in competing against generalists on price or volume. My focus is narrow on purpose so the expertise runs deep.</p>
+        <p class="fade-up">My Lagos timezone is not a limitation. It means I am reconciling your previous day's transactions in my morning while you sleep, so your books are ready before you start work. I want to serve 10 to 14 sellers well for years, not hundreds of clients at arm's length. That is what EcomKeeping is built to be.</p>
+        <p class="fade-up">I am transparent about where I am: a few months into this niche, but with real credentials — A2X Certified, Intuit Bookkeeping Certified, and QBO ProAdvisor, all trained specifically with e-commerce application in mind. I know your platform, I know your tools, and I will know your business.</p>
         <div class="about-certs fade-up">
           <div class="about-cert-pill">Intuit Certified Bookkeeper</div>
           <div class="about-cert-pill">QuickBooks Online ProAdvisor</div>
@@ -664,13 +693,21 @@
   </div>
 </section>
 
-<!-- ═══ PRICING ═══ -->
+<!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="pricing-intro">
       <div class="section-eyebrow fade-up">What it costs</div>
       <h2 class="section-heading fade-up">Monthly bookkeeping — flat monthly rate</h2>
-      <p class="section-body fade-up">No hourly billing. No invoices that change month to month. The rate is fixed based on your channel count and transaction volume. All plans include Loom walkthroughs of your monthly financials.</p>
+      <p class="section-body fade-up">No hourly billing. No invoices that change month to month. The rate is fixed based on your channel count and transaction volume.</p>
+    </div>
+
+    <!-- FIRST MONTH OFFER BANNER -->
+    <div class="first-month-banner fade-up">
+      <div class="fmb-badge">50% off — first month</div>
+      <div class="fmb-text">
+        <strong>New clients start at half price.</strong> The first month is 50% off your plan rate — no catch, no long-term contract required. If it's not working after month one, you don't continue. The discount is there so you can see the work before committing to the full rate.
+      </div>
     </div>
 
     <div class="pricing-grid fade-up">
@@ -680,7 +717,14 @@
         <div class="plan-header">
           <div class="plan-tier-label">Single Channel</div>
           <div class="plan-name">Starter</div>
-          <div class="plan-amount"><sup>$</sup>449<sub>/month</sub></div>
+          <div class="plan-price-row">
+            <div class="plan-amount"><sup>$</sup>449<sub>/month</sub></div>
+          </div>
+          <div class="plan-first-month">
+            <span class="plan-first-month-label">First month</span>
+            <span class="plan-first-month-price">$225</span>
+            <span class="plan-first-month-then">then $449</span>
+          </div>
           <div class="plan-volume">1 sales channel &nbsp;·&nbsp; up to 500 transactions/month</div>
           <div class="plan-desc">For sellers on Amazon only or Shopify only, with manageable transaction volume and a single platform to reconcile.</div>
         </div>
@@ -700,7 +744,7 @@
         </div>
         <div class="plan-footer">
           <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="plan-btn">Schedule a call to discuss</a>
-          <div class="plan-footer-note">Delivered by the 5th, or next business day.</div>
+          <div class="plan-footer-note">Delivered by the 5th, or next business day. No long-term contract.</div>
         </div>
       </div>
 
@@ -709,7 +753,14 @@
         <div class="plan-header">
           <div class="plan-tier-label">Multi-Channel</div>
           <div class="plan-name">Growth</div>
-          <div class="plan-amount"><sup>$</sup>679<sub>/month</sub></div>
+          <div class="plan-price-row">
+            <div class="plan-amount"><sup>$</sup>679<sub>/month</sub></div>
+          </div>
+          <div class="plan-first-month">
+            <span class="plan-first-month-label">First month</span>
+            <span class="plan-first-month-price">$340</span>
+            <span class="plan-first-month-then">then $679</span>
+          </div>
           <div class="plan-volume">Up to 3 sales channels &nbsp;·&nbsp; up to 2,000 transactions/month</div>
           <div class="plan-desc">For sellers running Amazon and Shopify together, or adding a third channel, who need multi-platform reconciliation and regular financial check-ins.</div>
         </div>
@@ -732,7 +783,7 @@
         </div>
         <div class="plan-footer">
           <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="plan-btn">Schedule a call to discuss</a>
-          <div class="plan-footer-note">Delivered by the 5th, or next business day.</div>
+          <div class="plan-footer-note">Delivered by the 5th, or next business day. No long-term contract.</div>
         </div>
       </div>
 
@@ -741,7 +792,14 @@
         <div class="plan-header">
           <div class="plan-tier-label">High Volume</div>
           <div class="plan-name">Scale</div>
-          <div class="plan-amount"><sup>$</sup>919<sub>/month</sub></div>
+          <div class="plan-price-row">
+            <div class="plan-amount"><sup>$</sup>919<sub>/month</sub></div>
+          </div>
+          <div class="plan-first-month">
+            <span class="plan-first-month-label">First month</span>
+            <span class="plan-first-month-price">$460</span>
+            <span class="plan-first-month-then">then $919</span>
+          </div>
           <div class="plan-volume">Up to 5 sales channels &nbsp;·&nbsp; up to 5,000 transactions/month</div>
           <div class="plan-desc">For high-volume sellers operating across multiple marketplaces who need advanced COGS analysis, frequent check-ins, and priority support.</div>
         </div>
@@ -765,12 +823,11 @@
         </div>
         <div class="plan-footer">
           <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="plan-btn">Schedule a call to discuss</a>
-          <div class="plan-footer-note">Delivered by the 5th, or next business day.</div>
+          <div class="plan-footer-note">Delivered by the 5th, or next business day. No long-term contract.</div>
         </div>
       </div>
 
     </div>
-
     <p style="font-size:0.84rem;color:var(--slate);text-align:center;margin-top:1.6rem;" class="fade-up">
       Need a cleanup or QBO setup before starting monthly service?
       <a href="mailto:emmanuel@ecomkeeping.com" style="color:var(--navy);font-weight:600;">Send a message</a> for a one-time quote.
@@ -778,7 +835,95 @@
   </div>
 </section>
 
-<!-- ═══ CONTACT ═══ -->
+<!-- ═══ FAQ ═══ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-intro">
+      <div class="section-eyebrow fade-up">Common questions</div>
+      <h2 class="section-heading fade-up">Things people ask before booking</h2>
+      <p class="section-body fade-up">Straightforward answers. If something isn't covered here, send an email before the call.</p>
+    </div>
+    <div class="faq-grid fade-up">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">You're based in Nigeria. How does communication actually work day-to-day?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          I'm available from 8am to 2pm EDT Monday through Friday — which covers the full US morning. For scheduled calls, we use Zoom or Google Meet. For day-to-day questions, email and WhatsApp (Growth and Scale plans). Most clients find the timezone works in their favour rather than against them: I'm doing reconciliation work in my morning while they sleep, so their books are ready before their day starts. Communication hasn't been an issue.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">You're early in your practice. Why should I trust you with my books?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          That's a fair question and I won't dodge it. I'm a few months into building this practice. What I can point to is real: I'm A2X Certified, Intuit Bookkeeping Certified, and a QBO ProAdvisor — all trained specifically on e-commerce application, not general accounting. I've applied these skills in hands-on bookkeeping scenarios, and I know the platforms. The free book audit is also designed specifically for this situation — you see how I think and what I find before you commit a cent. Most people find that more convincing than a list of years on a profile.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">I don't have QuickBooks Online or A2X set up yet. Is that a problem?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          No. If you need a QBO and A2X setup from scratch, that's a separate one-time service — we configure everything correctly for e-commerce before the monthly work begins. If you already have QBO but not A2X, we add and configure A2X as part of onboarding. Either way, the setup is handled before the first month starts, so you're not paying for work on an unconfigured system.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What does the first month actually look like?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          The first month starts with onboarding — I get accountant access to your QBO, confirm A2X is connected correctly, and review the chart of accounts. Then I reconcile the current month as it closes, deliver your P&L, Balance Sheet, and Cash Flow by the 5th, record a Loom walkthrough explaining the numbers, and send everything over. If there's a backlog from prior months, we scope that separately as a cleanup project before monthly work begins.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do you handle sales tax filing?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          No — and that's intentional. Sales tax filing is a licensed tax specialist's job. What I do is monitor your nexus exposure across states, flag when you've crossed economic thresholds, and ensure tax is recorded correctly as a liability (not as income). When it's time to file, your books are clean and the liability is visible — you hand that to your CPA or a sales tax specialist. I'm your bookkeeper, not your tax preparer, and keeping those roles separate is better for you.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is there a long-term contract?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          No. The engagement is month-to-month. The first month is 50% off, and if after that first month either of us decides it's not the right fit, we stop — no penalty, no awkward process. I'd rather earn the continued relationship month by month than lock anyone in. In practice, the reason I offer the first-month discount is so you can evaluate the actual work before committing to the full rate.
+        </div>
+      </div>
+
+      <div class="faq-item full-width">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">My books are a mess and I'm months behind. Where does that leave me?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          That's one of the most common situations I hear about on calls. If your books are behind, we start with a cleanup project before monthly service begins — this covers the backlog, gets everything reconciled and correctly categorized, and delivers tax-ready financials for those months. The cleanup is scoped as a separate one-time project based on how many months are outstanding. Once the backlog is cleared, we move into the regular monthly cadence. The free book audit at the start of the process will tell you exactly what the backlog looks like and what fixing it involves.
+        </div>
+      </div>
+
+    </div>
+    <div class="faq-cta fade-up">
+      <p>Have a question that isn't here? Email before booking — <a href="mailto:emmanuel@ecomkeeping.com" style="color:var(--navy);font-weight:600;">emmanuel@ecomkeeping.com</a></p>
+      <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="btn btn-navy">Schedule a Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
     <div class="section-eyebrow fade-up">Get in touch</div>
@@ -821,36 +966,21 @@
   </div>
 </section>
 
-<!-- ═══ CREDENTIALS ═══ -->
+<!-- CREDENTIALS -->
 <div class="creds-section">
   <div class="creds-inner">
     <div class="creds-label">Verified Credentials</div>
     <div class="creds-row">
-      <div class="cred-item">
-        <img src="intuit-badge.png" alt="Intuit Bookkeeping Trained" />
-        <div class="cred-name">Intuit Bookkeeping Trained</div>
-      </div>
-      <div class="cred-item">
-        <img src="qbo-badge.png" alt="QuickBooks ProAdvisor Level 1 Certified" />
-        <div class="cred-name">QuickBooks ProAdvisor Certified</div>
-      </div>
-      <div class="cred-item">
-        <img src="intuit-proadvisor-badge-tier-silver.png" alt="Intuit ProAdvisor Silver" />
-        <div class="cred-name">Intuit ProAdvisor Silver</div>
-      </div>
-      <div class="cred-item">
-        <img src="qbo-cas.png" alt="Client Advisory Services Graduate" />
-        <div class="cred-name">Client Advisory Services Graduate</div>
-      </div>
-      <div class="cred-item">
-        <img src="A2X_badge-certified.png" alt="A2X Certified E-commerce Bookkeeper" />
-        <div class="cred-name">A2X Certified E-commerce Bookkeeper</div>
-      </div>
+      <div class="cred-item"><img src="intuit-badge.png" alt="Intuit Bookkeeping Trained" /><div class="cred-name">Intuit Bookkeeping Trained</div></div>
+      <div class="cred-item"><img src="qbo-badge.png" alt="QuickBooks ProAdvisor Level 1 Certified" /><div class="cred-name">QuickBooks ProAdvisor Certified</div></div>
+      <div class="cred-item"><img src="intuit-proadvisor-badge-tier-silver.png" alt="Intuit ProAdvisor Silver" /><div class="cred-name">Intuit ProAdvisor Silver</div></div>
+      <div class="cred-item"><img src="qbo-cas.png" alt="Client Advisory Services Graduate" /><div class="cred-name">Client Advisory Services Graduate</div></div>
+      <div class="cred-item"><img src="A2X_badge-certified.png" alt="A2X Certified E-commerce Bookkeeper" /><div class="cred-name">A2X Certified E-commerce Bookkeeper</div></div>
     </div>
   </div>
 </div>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -898,11 +1028,21 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Navbar shadow on scroll
+  // Navbar shadow
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').style.boxShadow =
       window.scrollY > 8 ? '0 2px 18px rgba(0,0,0,0.07)' : 'none';
   });
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    // Open clicked if it was closed
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
