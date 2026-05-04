@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleanup and Catch-Up — EcomKeeping | Fix Your Amazon and Shopify Books</title>
+  <meta name="description" content="Behind on your books? EcomKeeping cleans up any backlog of Amazon and Shopify transactions and delivers tax-ready financials in 3 to 9 business days. Fixed price, full deliverables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1E3A8A; --navy-dark: #152c6b; --navy-mid: #2d4fa8;
+      --emerald: #10B981; --emerald-dark: #059669; --emerald-light: #D1FAE5;
+      --white: #FFFFFF; --slate: #64748B; --slate-light: #94A3B8;
+      --charcoal: #1F2937; --light-bg: #F8FAFF; --border: #E2E8F0;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--charcoal); background: var(--white); line-height: 1.65; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: 1060px; margin: 0 auto; padding: 0 5%; }
+    .eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--emerald); margin-bottom: 0.5rem; }
+    .section-heading { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 0.8rem; letter-spacing: -0.02em; }
+    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* NAV */
+    nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 5%; height: 62px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.15rem; color: var(--navy); }
+    .nav-brand span { color: var(--emerald); }
+    .nav-back { font-size: 0.82rem; color: var(--slate); display: flex; align-items: center; gap: 0.35rem; transition: color 0.2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(150deg, #0f2360 0%, var(--navy) 50%, #1a4ea8 100%);
+      padding: 80px 5% 70px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(16,185,129,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
+    .hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.35); color: #6EE7B7; border-radius: 50px; padding: 0.35rem 1rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
+    .hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 900; color: var(--white); line-height: 1.12; margin-bottom: 1.2rem; letter-spacing: -0.025em; }
+    .hero h1 em { color: var(--emerald); font-style: normal; }
+    .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 2.2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald); color: var(--white); padding: 0.95rem 2.2rem; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; box-shadow: 0 4px 24px rgba(16,185,129,0.45); transition: all 0.2s; }
+    .hero-cta:hover { background: var(--emerald-dark); transform: translateY(-2px); }
+    .hero-cta-note { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 0.7rem; }
+    .hero-stats { display: flex; align-items: center; justify-content: center; gap: 2.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--emerald); }
+    .hero-stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-top: 0.15rem; }
+
+    /* PROBLEMS */
+    .problems { padding: 80px 5%; background: var(--light-bg); }
+    .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 2.5rem; }
+    .prob-list { display: flex; flex-direction: column; gap: 1rem; }
+    .prob-item { background: var(--white); border-radius: 10px; padding: 1.1rem 1.3rem; border-left: 3px solid #EF4444; display: flex; gap: 0.9rem; align-items: flex-start; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+    .prob-item-body strong { display: block; font-weight: 600; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 0.2rem; }
+    .prob-item-body p { font-size: 0.82rem; color: var(--slate); line-height: 1.55; }
+    .prob-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.15rem; color: #EF4444; }
+    .prob-callout { background: linear-gradient(145deg, var(--navy), var(--navy-mid)); border-radius: 14px; padding: 2.2rem; color: var(--white); }
+    .prob-callout h3 { font-size: 1.05rem; margin-bottom: 0.8rem; line-height: 1.4; }
+    .prob-callout p { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 1.5rem; }
+    .btn-emerald { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald); color: var(--white); padding: 0.82rem 1.8rem; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.9rem; transition: all 0.2s; }
+    .btn-emerald:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+
+    /* WHAT YOU GET */
+    .what-you-get { padding: 80px 5%; background: var(--white); }
+    .wyg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
+    .wyg-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: box-shadow 0.2s; }
+    .wyg-card:hover { box-shadow: 0 3px 16px rgba(30,58,138,0.08); }
+    .wyg-icon { font-size: 1.4rem; margin-bottom: 0.7rem; }
+    .wyg-card h4 { font-size: 0.9rem; color: var(--navy); margin-bottom: 0.4rem; }
+    .wyg-card p { font-size: 0.81rem; color: var(--slate); line-height: 1.6; }
+
+    /* PRICING */
+    .pricing { padding: 80px 5%; background: var(--light-bg); }
+    .pricing-intro { max-width: 580px; margin-bottom: 2.5rem; }
+    .pricing-note { background: #ECFDF5; border: 1px solid rgba(16,185,129,0.25); border-radius: 10px; padding: 1rem 1.4rem; font-size: 0.85rem; color: #065F46; margin-bottom: 2rem; line-height: 1.6; }
+    .pricing-note strong { font-weight: 700; }
+    .pricing-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .pc-card { background: var(--white); border: 1px solid var(--border); border-radius: 13px; padding: 1.8rem; transition: all 0.2s; position: relative; overflow: hidden; }
+    .pc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .pc-card:hover { box-shadow: 0 6px 24px rgba(30,58,138,0.1); transform: translateY(-2px); }
+    .pc-card.light::before { background: var(--emerald); }
+    .pc-card.mid::before { background: var(--navy); }
+    .pc-card.heavy::before { background: var(--charcoal); }
+    .pc-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .pc-card.light .pc-label { color: var(--emerald-dark); }
+    .pc-card.mid .pc-label { color: var(--navy); }
+    .pc-card.heavy .pc-label { color: var(--charcoal); }
+    .pc-card h4 { font-size: 1rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .pc-card p { font-size: 0.83rem; color: var(--slate); line-height: 1.6; margin-bottom: 1rem; }
+    .pc-signals { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .pc-signals li { font-size: 0.78rem; color: var(--slate); display: flex; gap: 0.4rem; align-items: flex-start; line-height: 1.45; }
+    .pc-signals li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--slate-light); flex-shrink: 0; margin-top: 0.45rem; }
+    .pc-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.9rem; color: var(--navy); margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .pc-price span { font-size: 0.75rem; font-weight: 500; color: var(--slate); }
+
+    /* PROCESS */
+    .process { padding: 80px 5%; background: var(--navy); color: var(--white); }
+    .process .section-heading { color: var(--white); }
+    .process-intro-text { font-size: 0.95rem; color: rgba(255,255,255,0.65); max-width: 560px; line-height: 1.7; margin-top: 0.5rem; margin-bottom: 3rem; }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .ps-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; position: relative; }
+    .ps-card.assessment-card { border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.08); }
+    .ps-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: rgba(255,255,255,0.2); line-height: 1; margin-bottom: 0.6rem; }
+    .ps-card.assessment-card .ps-num { color: rgba(16,185,129,0.4); }
+    .ps-free { display: inline-block; background: #ECFDF5; color: #065F46; font-size: 0.62rem; font-weight: 700; padding: 0.13rem 0.45rem; border-radius: 3px; border: 1px solid #A7F3D0; letter-spacing: 0.04em; margin-bottom: 0.4rem; }
+    .ps-card h4 { font-size: 0.9rem; margin-bottom: 0.4rem; line-height: 1.3; }
+    .ps-card p { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .ps-card.assessment-card h4 { color: #6EE7B7; }
+    .ps-note { margin-top: 2rem; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.2); border-radius: 10px; padding: 1.2rem 1.5rem; font-size: 0.87rem; color: rgba(255,255,255,0.75); line-height: 1.65; }
+    .ps-note strong { color: #6EE7B7; }
+
+    /* PHASES */
+    .phases { padding: 80px 5%; background: var(--light-bg); }
+    .phases-intro { max-width: 600px; margin-bottom: 2.5rem; }
+    .phases-timeline { display: flex; flex-direction: column; gap: 0; }
+    .phase-item { display: flex; gap: 1.5rem; align-items: flex-start; padding-bottom: 1.5rem; position: relative; }
+    .phase-item:not(:last-child)::before { content: ''; position: absolute; left: 17px; top: 38px; bottom: 0; width: 2px; background: var(--border); }
+    .phase-dot { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .phase-item.active-phase .phase-dot { background: var(--emerald); }
+    .phase-content h4 { font-size: 0.92rem; color: var(--navy); margin-bottom: 0.3rem; padding-top: 0.4rem; }
+    .phase-content p { font-size: 0.82rem; color: var(--slate); line-height: 1.6; }
+    .phase-start-note { background: var(--navy); color: var(--white); border-radius: 10px; padding: 1rem 1.4rem; font-size: 0.85rem; line-height: 1.6; margin: 1.5rem 0 1.5rem 52px; }
+    .phase-start-note strong { color: var(--emerald); }
+
+    /* BEFORE AFTER */
+    .before-after { padding: 80px 5%; background: var(--white); }
+    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .ba-col { border-radius: 13px; padding: 2rem; }
+    .ba-col.before { background: #FEF2F2; border: 1px solid rgba(239,68,68,0.15); }
+    .ba-col.after { background: #F0FDF9; border: 1px solid rgba(16,185,129,0.2); }
+    .ba-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+    .ba-col.before .ba-label { color: #DC2626; }
+    .ba-col.after .ba-label { color: var(--emerald-dark); }
+    .ba-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .ba-list li { font-size: 0.84rem; display: flex; gap: 0.6rem; align-items: flex-start; line-height: 1.5; }
+    .ba-col.before .ba-list li { color: #7F1D1D; }
+    .ba-col.after .ba-list li { color: #065F46; }
+    .ba-tick { flex-shrink: 0; margin-top: 0.05rem; }
+
+    /* FAQ */
+    .faq { padding: 80px 5%; background: var(--light-bg); }
+    .faq-list { max-width: 720px; margin: 2.5rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; padding: 1.2rem 1.5rem; text-align: left; cursor: pointer; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .faq-q-text { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--navy); line-height: 1.4; }
+    .faq-chevron { width: 20px; height: 20px; border-radius: 50%; background: var(--light-bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.6rem; color: var(--slate); transition: transform 0.25s, background 0.2s; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); background: var(--emerald); color: var(--white); border-color: var(--emerald); }
+    .faq-a { display: none; padding: 0 1.5rem 1.2rem; font-size: 0.86rem; color: var(--slate); line-height: 1.7; border-top: 1px solid var(--border); }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CTA */
+    .cta-section { padding: 90px 5%; background: linear-gradient(150deg, #0f2360 0%, var(--navy) 60%, #1a4ea8 100%); text-align: center; }
+    .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: var(--white); margin-bottom: 1rem; letter-spacing: -0.02em; line-height: 1.2; }
+    .cta-section h2 em { color: var(--emerald); font-style: normal; }
+    .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.05rem; box-shadow: 0 4px 28px rgba(16,185,129,0.5); transition: all 0.2s; }
+    .cta-btn:hover { background: var(--emerald-dark); transform: translateY(-2px); }
+    .cta-guarantees { display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1.8rem; flex-wrap: wrap; }
+    .cta-g { font-size: 0.78rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 0.4rem; }
+    .cta-g::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
+
+    /* FOOTER */
+    .page-footer { background: var(--charcoal); padding: 1.8rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+    .pf-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .pf-brand span { color: var(--emerald); }
+    .pf-links { display: flex; gap: 1.5rem; }
+    .pf-links a { font-size: 0.78rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+    .pf-links a:hover { color: var(--emerald); }
+    .pf-copy { font-size: 0.72rem; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 900px) {
+      .wyg-grid, .pricing-cards, .process-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .problems-grid, .ba-grid { grid-template-columns: 1fr; }
+      .hero { padding: 60px 4% 50px; }
+      .hero-stats { gap: 1.2rem; }
+    }
+    @media (max-width: 560px) {
+      .wyg-grid, .pricing-cards, .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Ecom<span>Keeping</span></div>
+  <a href="https://ecomkeeping.com" class="nav-back">&#8592; Back to main site</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-pill">Any Backlog Length · Fixed Price · Full Deliverables</div>
+    <h1>Your books are behind. Let's get them <em>clean, accurate, and CPA-ready</em>.</h1>
+    <p class="hero-desc">
+      EcomKeeping cleans up any backlog of Amazon FBA and Shopify transactions.
+      Correct settlement recording, COGS tracking, full reconciliation,
+      and a complete deliverables package delivered in 3 to 9 business days.
+    </p>
+    <!-- REPLACE THIS HREF with your Tally form URL e.g. https://tally.so/r/obl7Eb -->
+    <a href="https://tally.so/r/obl7Eb" class="hero-cta">Request a Cleanup Assessment</a>
+    <p class="hero-cta-note">Fill a short form. We assess your file and send a fixed quote before any work begins.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">3–14</div><div class="hero-stat-label">Business day turnaround</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">8</div><div class="hero-stat-label">Cleanup phases</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-label">Clearing account balance on delivery</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Fixed</div><div class="hero-stat-label">Price agreed upfront</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems">
+  <div class="container">
+    <div class="eyebrow fade-up">Why the books are wrong</div>
+    <h2 class="section-heading fade-up">The errors that end up in almost every e-commerce file</h2>
+    <div class="problems-grid">
+      <div class="prob-list">
+        <div class="prob-item fade-up">
+          <div class="prob-icon">&#9888;</div>
+          <div class="prob-item-body">
+            <strong>Net deposits recorded as revenue</strong>
+            <p>Amazon pays after deducting fees. Recording the deposit as revenue understates gross income, misses thousands in deductible expenses, and makes your P&amp;L meaningless.</p>
+          </div>
+        </div>
+        <div class="prob-item fade-up">
+          <div class="prob-icon">&#9888;</div>
+          <div class="prob-item-body">
+            <strong>No COGS means no real margin</strong>
+            <p>If product purchases are expensed directly or not recorded at all, your gross margin is completely wrong. You cannot price products correctly or know what you are actually making.</p>
+          </div>
+        </div>
+        <div class="prob-item fade-up">
+          <div class="prob-icon">&#9888;</div>
+          <div class="prob-item-body">
+            <strong>Sales tax sitting in income</strong>
+            <p>Tax collected on behalf of a state is a liability, not your revenue. When it ends up in an income account it overstates sales and hides what you owe.</p>
+          </div>
+        </div>
+        <div class="prob-item fade-up">
+          <div class="prob-icon">&#9888;</div>
+          <div class="prob-item-body">
+            <strong>Months of unreconciled transactions</strong>
+            <p>Every month behind means more errors compounding. Your CPA charges more. Your tax position is unclear. Every report you have been looking at is wrong.</p>
+          </div>
+        </div>
+      </div>
+      <div class="prob-callout fade-up">
+        <h3>Every one of these is fixable. The cleanup is a defined project with a fixed price.</h3>
+        <p>Before any work begins, I assess your file and send you a written cleanup plan with a fixed price. No hourly billing, no scope creep, no surprises. You approve the plan and pay a deposit before I start — not before I quote.</p>
+        <!-- REPLACE href with your Tally form URL -->
+        <a href="https://tally.so/r/obl7Eb" class="btn-emerald">Request an Assessment &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="what-you-get">
+  <div class="container">
+    <div class="eyebrow fade-up">What you receive</div>
+    <h2 class="section-heading fade-up">The full deliverables package, every cleanup, every time</h2>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:560px;line-height:1.7;" class="fade-up">
+      This is not just a reconciliation service where you get a clean file and nothing else.
+      Every cleanup includes a full reporting package, a KPI dashboard, and a Loom walkthrough explaining every correction made.
+    </p>
+    <div class="wyg-grid">
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#128202;</div>
+        <h4>P&amp;L, Balance Sheet and Cash Flow</h4>
+        <p>Full financial statements for the entire cleanup period. Accurate gross revenue, correctly tracked COGS, and real net profitability visible for the first time.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#9989;</div>
+        <h4>Full Reconciliation Across All Accounts</h4>
+        <p>Every bank account, credit card, and clearing account reconciled for every month in the cleanup period. Zero discrepancies. Reports exported as PDFs.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#128187;</div>
+        <h4>KPI Dashboard</h4>
+        <p>Full metrics for the cleanup period including gross margin, net margin, ROAS, AOV, inventory turnover, return rate, and channel split.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#127909;</div>
+        <h4>Loom Video Walkthrough</h4>
+        <p>An 8 to 12 minute screen recording walking through every correction made, what your numbers now show, and what needs your attention. Before and after comparison included.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#128203;</div>
+        <h4>Cleanup Completion Report</h4>
+        <p>Written report with a before-and-after comparison, list of every fix applied, and your financial position as of the cleanup end date.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#128196;</div>
+        <h4>Error Log</h4>
+        <p>Complete documentation of every correction including the date, original category, new category, and reason. A full audit trail your CPA can reference.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#9881;</div>
+        <h4>A2X Live and Running</h4>
+        <p>A2X configured, connected, and tested for ongoing automation. Every future settlement posts correctly without any manual work going forward.</p>
+      </div>
+      <div class="wyg-card fade-up">
+        <div class="wyg-icon">&#128100;</div>
+        <h4>CPA Handoff Package</h4>
+        <p>Email to your CPA with corrected financials, a summary of what was fixed, and the Sales Tax Payable figure they need for filing.</p>
+      </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <div class="pricing-intro">
+      <div class="eyebrow fade-up">Pricing</div>
+      <h2 class="section-heading fade-up">Fixed price, assessed before any work begins</h2>
+      <p style="font-size:0.95rem;color:var(--slate);line-height:1.7;" class="fade-up">
+        The price depends on how messy the books are and how many months need cleaning. I assess your file first and send you a written quote. You approve it before I start. Prices start from $360.
+      </p>
+    </div>
+    <div class="pricing-note fade-up">
+      <strong>How pricing works:</strong> After reviewing your file, I identify which scenario your books fall into. The scenario combined with the number of months behind determines your fixed price. The quote is sent in writing and agreed before any paid work begins. No surprises mid-project.
+    </div>
+    <div class="pricing-cards fade-up">
+      <div class="pc-card light">
+        <div class="pc-label">Scenario A</div>
+        <h4>Messy DIY Books</h4>
+        <p>You have been recording net deposits as sales, no COGS setup, no fee breakdown, and sales tax mixed into income. The books exist but every number is systematically wrong.</p>
+        <ul class="pc-signals">
+          <li>No A2X ever used</li>
+          <li>Deposits coded directly to Sales or Income</li>
+          <li>No clearing accounts set up</li>
+          <li>No COGS account activity on the P&amp;L</li>
+        </ul>
+        <div class="pc-price">Starts from $360 <span>· single or multi-channel</span></div>
+      </div>
+      <div class="pc-card mid">
+        <div class="pc-label">Scenario B</div>
+        <h4>Previous Bookkeeper File</h4>
+        <p>A non-specialist bookkeeper or VA was involved. Wrong account mapping, duplicates, and partial reconciliations. Books look partially credible but numbers are deeply wrong.</p>
+        <ul class="pc-signals">
+          <li>Previous bookkeeper or VA involved</li>
+          <li>A2X setup attempted but abandoned</li>
+          <li>Duplicate entries present</li>
+          <li>Some months reconciled incorrectly</li>
+        </ul>
+        <div class="pc-price">Starts from $400 <span>· single or multi-channel</span></div>
+      </div>
+      <div class="pc-card heavy">
+        <div class="pc-label">Scenario C</div>
+        <h4>Complete Rebuild</h4>
+        <p>Nothing meaningful in QBO, near-empty file, or spreadsheets only. This is treated as a historical build rather than a cleanup. Requires a custom quote after assessment.</p>
+        <ul class="pc-signals">
+          <li>No QBO activity or just created</li>
+          <li>No e-commerce data imported</li>
+          <li>Bank statements only, no A2X</li>
+          <li>No reconciliations at all</li>
+        </ul>
+        <div class="pc-price">Custom quote <span>· assessed after file review</span></div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--slate-light);margin-top:1.2rem;text-align:center;" class="fade-up">
+      Not sure which scenario you are? That is what the assessment is for. <a href="https://tally.so/r/obl7Eb" style="color:var(--navy);font-weight:600;">Fill the form</a> and we will figure it out.
+    </p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS / PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="eyebrow fade-up" style="color:var(--emerald);">How it works</div>
+    <h2 class="section-heading fade-up" style="color:var(--white);margin-top:0.4rem;">No calls required upfront. Form first, everything else after.</h2>
+    <p class="process-intro-text fade-up">
+      You fill a short form. I review it and get back to you within 24 hours. Everything from there happens over email or WhatsApp unless you want a call.
+    </p>
+    <div class="process-steps fade-up">
+      <div class="ps-card assessment-card">
+        <div class="ps-free">FREE</div>
+        <div class="ps-num">01</div>
+        <h4>Fill the intake form</h4>
+        <p>2 minutes. Tell me your platforms, how far behind the books are, whether you have QBO, and what your biggest frustration is.</p>
+      </div>
+      <div class="ps-card assessment-card">
+        <div class="ps-free">FREE</div>
+        <div class="ps-num">02</div>
+        <h4>I assess your QBO file</h4>
+        <p>Once you give me read-only access, I complete the full assessment in 2 to 3 hours. I identify your scenario, scope the work, and prepare the written quote.</p>
+      </div>
+      <div class="ps-card">
+        <div class="ps-num">03</div>
+        <h4>You receive the written quote</h4>
+        <p>Fixed price, scope of work, and expected delivery window. You approve it over email. Once you confirm and pay the deposit, the cleanup begins.</p>
+      </div>
+      <div class="ps-card">
+        <div class="ps-num">04</div>
+        <h4>Clean books delivered</h4>
+        <p>Full deliverables package sent via Google Drive in 3 to 9 business days. P&amp;L, reconciliations, KPI dashboard, Loom walkthrough, error log, and CPA handoff.</p>
+      </div>
+    </div>
+    <div class="ps-note fade-up">
+      <strong>No call required upfront.</strong> The entire process from form to delivered books happens over email and WhatsApp. A call is only needed if you have questions about the quote or want to discuss findings. You are in control of when and whether that happens.
+    </div>
+  </div>
+</section>
+
+<!-- CLEANUP PHASES -->
+<section class="phases">
+  <div class="container">
+    <div class="phases-intro">
+      <div class="eyebrow fade-up">The cleanup process</div>
+      <h2 class="section-heading fade-up">8 phases, completed in order, documented throughout</h2>
+      <p style="font-size:0.95rem;color:var(--slate);line-height:1.7;" class="fade-up">
+        Once you approve the quote and pay the deposit, work begins. The actual cleanup runs 3 to 9 business days depending on scope.
+      </p>
+    </div>
+    <div class="phases-timeline fade-up">
+      <div class="phase-item">
+        <div class="phase-dot">1</div>
+        <div class="phase-content">
+          <h4>Assessment and Proposal</h4>
+          <p>Full QBO review. Scenario identified. Written cleanup plan and fixed price sent for your approval before work begins.</p>
+        </div>
+      </div>
+      <div class="phase-item">
+        <div class="phase-dot">2</div>
+        <div class="phase-content">
+          <h4>Document Collection</h4>
+          <p>Bank statements, credit card statements, Amazon settlement CSVs, Shopify exports, and supplier invoices all collected before reconciliation begins. Nothing starts until documents are complete.</p>
+        </div>
+      </div>
+    </div>
+    <div class="phase-start-note">
+      <strong>Phases 1 and 2 complete.</strong> Cleanup begins here. Delivery within 3 to 9 business days from this point.
+    </div>
+    <div class="phases-timeline fade-up">
+      <div class="phase-item active-phase">
+        <div class="phase-dot">3</div>
+        <div class="phase-content">
+          <h4>Foundation and Data Import</h4>
+          <p>Chart of accounts rebuilt for e-commerce. Wrong entries removed first. A2X connected. Historical data pushed oldest-first and verified in batches.</p>
+        </div>
+      </div>
+      <div class="phase-item active-phase">
+        <div class="phase-dot">4</div>
+        <div class="phase-content">
+          <h4>Error Correction</h4>
+          <p>Duplicates, uncategorised transactions, sales tax reclassification, personal expenses, and product purchases. Every error documented and corrected.</p>
+        </div>
+      </div>
+      <div class="phase-item active-phase">
+        <div class="phase-dot">5</div>
+        <div class="phase-content">
+          <h4>Settlement Verification</h4>
+          <p>Every A2X settlement verified line by line. All clearing accounts confirmed at zero for each settlement period before moving forward.</p>
+        </div>
+      </div>
+      <div class="phase-item active-phase">
+        <div class="phase-dot">6</div>
+        <div class="phase-content">
+          <h4>Full Reconciliation</h4>
+          <p>Every bank account, credit card, and clearing account for every month in the cleanup period reconciled to zero discrepancy. Oldest month first.</p>
+        </div>
+      </div>
+      <div class="phase-item active-phase">
+        <div class="phase-dot">7</div>
+        <div class="phase-content">
+          <h4>Quality Check</h4>
+          <p>P&amp;L, Balance Sheet, and Transaction Detail reviewed. Gross margin sanity check against known product costs. All open items resolved.</p>
+        </div>
+      </div>
+      <div class="phase-item active-phase">
+        <div class="phase-dot">8</div>
+        <div class="phase-content">
+          <h4>Delivery</h4>
+          <p>Full reports package, KPI dashboard, Loom walkthrough, completion report, error log, and CPA handoff delivered via Google Drive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="before-after">
+  <div class="container">
+    <div class="eyebrow fade-up">The transformation</div>
+    <h2 class="section-heading fade-up">What changes between day one and delivery</h2>
+    <div class="ba-grid fade-up">
+      <div class="ba-col before">
+        <div class="ba-label">Before the cleanup</div>
+        <ul class="ba-list">
+          <li><span class="ba-tick">&#10007;</span> Revenue shown as net bank deposits, understating gross income by thousands per month</li>
+          <li><span class="ba-tick">&#10007;</span> No COGS tracking — gross margin unknown</li>
+          <li><span class="ba-tick">&#10007;</span> Sales tax sitting in income — liability hidden</li>
+          <li><span class="ba-tick">&#10007;</span> Amazon fees not broken out — no visibility on fulfillment or referral costs</li>
+          <li><span class="ba-tick">&#10007;</span> Bank accounts months or years unreconciled</li>
+          <li><span class="ba-tick">&#10007;</span> No clearing accounts — settlements not matched</li>
+          <li><span class="ba-tick">&#10007;</span> Books your CPA dreads receiving</li>
+          <li><span class="ba-tick">&#10007;</span> Business decisions based on numbers that are not real</li>
+        </ul>
+      </div>
+      <div class="ba-col after">
+        <div class="ba-label">After the cleanup</div>
+        <ul class="ba-list">
+          <li><span class="ba-tick">&#10003;</span> Gross revenue correctly recorded — every fee and refund category separated</li>
+          <li><span class="ba-tick">&#10003;</span> COGS tracked — real gross margin visible for the first time</li>
+          <li><span class="ba-tick">&#10003;</span> Sales tax in Sales Tax Payable — liability clearly shown</li>
+          <li><span class="ba-tick">&#10003;</span> Amazon fees broken out by category including referral, FBA, storage, and PPC</li>
+          <li><span class="ba-tick">&#10003;</span> Every account reconciled — zero discrepancies across all months</li>
+          <li><span class="ba-tick">&#10003;</span> A2X live and posting automatically going forward</li>
+          <li><span class="ba-tick">&#10003;</span> Tax-ready books — your CPA gets a clean file with a proper handoff</li>
+          <li><span class="ba-tick">&#10003;</span> KPI dashboard — real numbers to make real decisions from</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="eyebrow fade-up" style="text-align:center;">Common questions</div>
+    <h2 class="section-heading fade-up" style="text-align:center;">Before you fill the form</h2>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How do you price the cleanup before seeing my file?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          I do not quote without seeing the file first. After you fill the form, I request read-only access to your QBO and complete a free assessment in 2 to 3 hours. I then send you a written cleanup plan with a fixed price. You approve it and pay a deposit before any paid work begins. The prices on this page are starting points — your exact price is confirmed in writing after the assessment.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do I need to get on a call?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          No. The entire process from form to delivered books can happen over email and WhatsApp. You fill the form, I confirm, you give me QBO access, I assess and send a quote, you approve and deposit, I do the work and deliver. A call only happens if you have questions about the quote or want to discuss the findings. You are never required to book a call to get started.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do I need QuickBooks Online already?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          You need a QuickBooks Online subscription. Your file can be nearly empty — that falls into Scenario C and is treated as a historical build. If you do not have QBO at all, fill the form and mention it. We will set it up as part of the project scope.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What if I do not have product costs or supplier invoices?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          COGS cannot be calculated without product cost data. During the cleanup I follow a defined process: check Shopify product pages, check Amazon inventory reports, then request supplier invoices directly from you. If none are available, I document this clearly and we agree on a path forward in writing. I never estimate costs without your confirmation.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What does the turnaround actually look like?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          The cleanup itself runs 3 to 9 business days from the point you approve the quote and all source documents are received. The assessment and document collection phases happen before the clock starts. You will receive a weekly progress update throughout. The most common cause of delays is incomplete documents, which is why I collect everything before starting.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Does the cleanup include setting up ongoing bookkeeping?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          The cleanup is a standalone project. It covers the backlog period and delivers clean, tax-ready books. A2X is configured and running as part of the project. At the end of the cleanup I include a recommendation for ongoing monthly bookkeeping if that makes sense for your business. Many clients move straight from cleanup into the monthly service, but there is no obligation.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">My previous bookkeeper left the books in a mess. Can you still fix it?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">
+          Yes. That is Scenario B and it makes up about a third of cleanup projects. The complication with prior-bookkeeper files is that incorrect entries sometimes look correct at first glance, and there is a risk of pushing A2X data on top of existing wrong entries. The assessment catches all of this before work begins, and the plan accounts for it. Scenario B projects are scoped accordingly.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="fade-up">The longer the books stay wrong, the <em>bigger the cleanup becomes</em>.</h2>
+    <p class="fade-up">Every month that passes adds more transactions to reconcile, more errors to untangle, and a larger gap between what your books show and what actually happened. The assessment is free. The price is fixed. The books get clean.</p>
+    <!-- REPLACE href with your Tally form URL -->
+    <a href="https://tally.so/r/obl7Eb" class="cta-btn fade-up">Request a Cleanup Assessment</a>
+    <div class="cta-guarantees fade-up">
+      <div class="cta-g">Fixed price agreed before work begins</div>
+      <div class="cta-g">3 to 9 business day turnaround</div>
+      <div class="cta-g">Full deliverables package included</div>
+      <div class="cta-g">No call required upfront</div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="pf-brand">Ecom<span>Keeping</span></div>
+  <div class="pf-links">
+    <a href="https://ecomkeeping.com">Home</a>
+    <a href="https://ecomkeeping.com/bookaudit">Free Book Audit</a>
+    <a href="mailto:emmanuel@ecomkeeping.com">Contact</a>
+  </div>
+  <div class="pf-copy">&#169; 2026 EcomKeeping</div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
