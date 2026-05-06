@@ -133,52 +133,6 @@
     .about-cert-pill { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 50px; padding: 0.28rem 0.8rem; font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.85); }
     .about-cert-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
 
-    /* ── PRICING TEASER ── */
-    .pricing-teaser { padding: 90px 5%; background: var(--white); }
-    .pricing-teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
-    .pt-card { border: 1px solid var(--border); border-radius: 13px; padding: 1.8rem; background: var(--white); transition: all 0.2s; position: relative; overflow: hidden; }
-    .pt-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--border); }
-    .pt-card:hover { box-shadow: 0 6px 24px rgba(30,58,138,0.1); transform: translateY(-2px); }
-    .pt-card.featured { border-color: rgba(16,185,129,0.3); background: linear-gradient(160deg, #F0FDF9, var(--white)); }
-    .pt-card.featured::before { background: var(--emerald); }
-    .pt-card.dark { background: linear-gradient(135deg, #1E3A8A, #2d5cc8); border-color: transparent; }
-    .pt-card.dark::before { background: rgba(255,255,255,0.2); }
-    .pt-tier { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.2rem; }
-    .pt-card.featured .pt-tier { color: var(--emerald-dark); }
-    .pt-card.dark .pt-tier { color: rgba(255,255,255,0.55); }
-    .pt-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.2rem; color: var(--navy); margin-bottom: 0.3rem; }
-    .pt-card.dark .pt-name { color: var(--white); }
-    .pt-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: var(--navy); line-height: 1; margin-bottom: 0.2rem; }
-    .pt-card.dark .pt-price { color: var(--white); }
-    .pt-price sup { font-size: 1rem; vertical-align: top; margin-top: 0.4rem; display: inline-block; }
-    .pt-price sub { font-size: 0.78rem; font-weight: 500; color: var(--slate); }
-    .pt-card.dark .pt-price sub { color: rgba(255,255,255,0.55); }
-    .pt-first { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25); border-radius: 4px; padding: 0.22rem 0.55rem; margin: 0.4rem 0 0.6rem; }
-    .pt-card.dark .pt-first { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.18); }
-    .pt-first-label { font-size: 0.66rem; color: var(--emerald-dark); font-weight: 600; }
-    .pt-card.dark .pt-first-label { color: rgba(255,255,255,0.65); }
-    .pt-first-val { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.85rem; color: var(--emerald-dark); }
-    .pt-card.dark .pt-first-val { color: #6EE7B7; }
-    .pt-volume { font-size: 0.76rem; color: var(--slate); margin-bottom: 0.8rem; }
-    .pt-card.dark .pt-volume { color: rgba(255,255,255,0.55); }
-    .pt-features { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.5rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
-    .pt-card.featured .pt-features { border-top-color: rgba(16,185,129,0.15); }
-    .pt-card.dark .pt-features { border-top-color: rgba(255,255,255,0.12); }
-    .pt-features li { font-size: 0.8rem; color: var(--charcoal); display: flex; gap: 0.45rem; align-items: flex-start; line-height: 1.4; }
-    .pt-card.dark .pt-features li { color: rgba(255,255,255,0.75); }
-    .pt-features li::before { content: '✓'; color: var(--emerald); font-weight: 700; flex-shrink: 0; font-size: 0.7rem; }
-    .pt-btn { display: block; width: 100%; text-align: center; padding: 0.72rem; border-radius: 7px; font-weight: 600; font-size: 0.86rem; transition: all 0.2s; }
-    .pt-card.starter .pt-btn { border: 2px solid var(--navy); color: var(--navy); }
-    .pt-card.starter .pt-btn:hover { background: var(--navy); color: var(--white); }
-    .pt-card.featured .pt-btn { background: var(--emerald); color: var(--white); }
-    .pt-card.featured .pt-btn:hover { background: var(--emerald-dark); }
-    .pt-card.dark .pt-btn { background: rgba(255,255,255,0.15); color: var(--white); border: 1px solid rgba(255,255,255,0.25); }
-    .pt-card.dark .pt-btn:hover { background: rgba(255,255,255,0.25); }
-    .pt-note { font-size: 0.7rem; color: var(--slate-light); text-align: center; margin-top: 0.6rem; }
-    .pt-card.dark .pt-note { color: rgba(255,255,255,0.3); }
-    .pricing-teaser-footer { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--slate); }
-    .pricing-teaser-footer a { color: var(--navy); font-weight: 600; }
-
     /* ── AVAILABILITY ── */
     .availability { padding: 90px 5%; background: var(--light-bg); }
     .av-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 2.5rem; }
@@ -463,79 +417,6 @@
         </div>
         <a href="https://ecomkeeping.com/about" class="btn-white">Read the full story &#8594;</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING TEASER -->
-<section class="pricing-teaser" id="pricing">
-  <div class="container">
-    <div class="eyebrow fade-up">Pricing</div>
-    <h2 class="section-heading fade-up">Monthly bookkeeping plans</h2>
-    <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">Three plans, two tiers of service. Starter for single-channel sellers. Growth and Scale are identical in service — the difference is channel count and transaction volume. First month is 50% off on all plans.</p>
-    <div class="pricing-teaser-grid fade-up">
-
-      <div class="pt-card starter">
-        <div class="pt-tier">Single Channel</div>
-        <div class="pt-name">Starter</div>
-        <div class="pt-price"><sup>$</sup>449<sub>/month</sub></div>
-        <div class="pt-first">
-          <span class="pt-first-label">First month</span>
-          <span class="pt-first-val">$225</span>
-        </div>
-        <div class="pt-volume">1 channel · up to 500 transactions/month</div>
-        <ul class="pt-features">
-          <li>P&amp;L, Balance Sheet, Cash Flow</li>
-          <li>A2X setup and management</li>
-          <li>Full reconciliation</li>
-          <li>COGS and sales tax monitoring</li>
-          <li>Loom walkthrough every month</li>
-        </ul>
-        <a href="https://ecomkeeping.com/monthly" class="pt-btn">See full plan</a>
-        <div class="pt-note">No long-term contract</div>
-      </div>
-
-      <div class="pt-card featured">
-        <div class="pt-tier">Multi-Channel</div>
-        <div class="pt-name">Growth</div>
-        <div class="pt-price"><sup>$</sup>679<sub>/month</sub></div>
-        <div class="pt-first">
-          <span class="pt-first-label">First month</span>
-          <span class="pt-first-val">$340</span>
-        </div>
-        <div class="pt-volume">Up to 3 channels · up to 2,000 transactions/month</div>
-        <ul class="pt-features">
-          <li>Everything in Starter</li>
-          <li>Product-level profitability reporting</li>
-          <li>Weekly transaction summaries</li>
-          <li>Monthly and bi-weekly check-in calls</li>
-          <li>Priority WhatsApp and email support</li>
-        </ul>
-        <a href="https://ecomkeeping.com/monthly" class="pt-btn">See full plan</a>
-        <div class="pt-note">No long-term contract</div>
-      </div>
-
-      <div class="pt-card dark">
-        <div class="pt-tier">High Volume</div>
-        <div class="pt-name">Scale</div>
-        <div class="pt-price"><sup>$</sup>919<sub>/month</sub></div>
-        <div class="pt-first">
-          <span class="pt-first-label">First month</span>
-          <span class="pt-first-val">$460</span>
-        </div>
-        <div class="pt-volume">Up to 5 channels · up to 5,000 transactions/month</div>
-        <ul class="pt-features">
-          <li>Same full service as Growth</li>
-          <li>Up to 5 sales channels</li>
-          <li>Up to 5,000 transactions/month</li>
-        </ul>
-        <a href="https://ecomkeeping.com/monthly" class="pt-btn">See full plan</a>
-        <div class="pt-note">No long-term contract</div>
-      </div>
-
-    </div>
-    <div class="pricing-teaser-footer fade-up">
-      Need a cleanup first? <a href="https://ecomkeeping.com/cleanup">Cleanup service starts from $360.</a> &nbsp;|&nbsp; Need a QBO setup? <a href="mailto:emmanuel@ecomkeeping.com">Get a custom quote.</a>
     </div>
   </div>
 </section>
