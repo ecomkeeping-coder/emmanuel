@@ -123,7 +123,7 @@
     .about-teaser-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: center; }
     .about-photo { width: 100%; aspect-ratio: 4/5; border-radius: 14px; object-fit: cover; object-position: top; display: block; }
     .about-photo-placeholder { width: 100%; aspect-ratio: 4/5; border-radius: 14px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
-    .about-cert-float { margin-top: -1rem; background: var(--white); border-radius: 9px; padding: 0.7rem 0.9rem; box-shadow: 0 4px 18px rgba(0,0,0,0.15); display: inline-flex; align-items: center; gap: 0.5rem; }
+    .about-cert-float { margin-top: 0.8rem; background: var(--white); border-radius: 9px; padding: 0.7rem 0.9rem; box-shadow: 0 4px 18px rgba(0,0,0,0.15); display: inline-flex; align-items: center; gap: 0.5rem; }
     .about-cert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
     .about-cert-float span { font-size: 0.72rem; font-weight: 600; color: var(--charcoal); }
     .about-text .eyebrow { color: var(--emerald); }
@@ -143,6 +143,9 @@
     .av-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
     .av-list li { font-size: 0.82rem; color: var(--slate); display: flex; gap: 0.45rem; align-items: flex-start; line-height: 1.45; }
     .av-list li::before { content: '→'; color: var(--emerald); flex-shrink: 0; }
+    .av-tagline { margin-top: 2rem; background: var(--navy); border-radius: 10px; padding: 1.2rem 1.5rem; text-align: center; }
+    .av-tagline p { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.95rem; color: var(--white); line-height: 1.4; }
+    .av-tagline span { color: var(--emerald); }
 
     /* ── FAQ ── */
     .faq { padding: 90px 5%; background: var(--white); }
@@ -182,6 +185,7 @@
     .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); margin-bottom: 0.5rem; }
     .footer-brand-name span { color: var(--emerald); }
     .footer-brand-desc { font-size: 0.8rem; line-height: 1.7; }
+    .footer-tagline { font-size: 0.78rem; color: var(--emerald); font-weight: 600; margin-top: 0.4rem; margin-bottom: 0.5rem; }
     .footer-col h5 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-bottom: 0.9rem; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
     .footer-col ul li a { font-size: 0.8rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
@@ -226,28 +230,28 @@
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — EDITED -->
 <section class="hero">
   <div class="hero-grid">
     <div>
       <div class="hero-tag">Amazon FBA &amp; Shopify Bookkeeping</div>
-      <h1>Your books should tell you whether you're <em>actually</em> profitable.</h1>
-      <p class="hero-desc">EcomKeeping handles the numbers — settlement reconciliation, COGS tracking, sales tax monitoring, and monthly financials your CPA will actually be able to use.</p>
+      <h1>Your books reconciled before your <em>US day starts.</em></h1>
+      <p class="hero-desc">EcomKeeping handles the numbers while you sleep. Settlement reconciliation, COGS tracking, sales tax monitoring, and monthly financials your CPA can actually use.</p>
       <div class="hero-btns">
         <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="btn-white">Schedule a Call</a>
         <a href="https://ecomkeeping.com/bookaudit" class="btn-green">Get a Free Book Audit</a>
       </div>
-      <p class="hero-cta-note">If we're a good fit, we'll review your books for free before you commit to anything.</p>
+      <p class="hero-cta-note">We review your books for free before you commit to anything.</p>
     </div>
     <div class="hero-right">
       <div class="hero-right-label">How we start</div>
       <h3>We begin with a free review of your books.</h3>
-      <p>Before you spend anything, we go through your QuickBooks file, identify what's wrong, and send you a written report showing exactly what each issue costs you. No obligation to continue.</p>
+      <p>Before you spend anything, we go through your QuickBooks file, identify what is wrong, and send you a written report showing exactly what each issue is. No obligation to continue.</p>
       <a href="https://ecomkeeping.com/bookaudit" class="btn-green" style="width:100%;justify-content:center;">Learn about the Free Book Audit &#8594;</a>
       <div class="hero-stats" style="margin-top:1.5rem;">
         <div class="hero-stat"><div class="hero-stat-num">A2X</div><div class="hero-stat-label">Certified Bookkeeper</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">QBO</div><div class="hero-stat-label">ProAdvisor</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">8–4</div><div class="hero-stat-label">Available ET</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">QBO</div><div class="hero-stat-label">Certified</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">4AM</div><div class="hero-stat-label">Work starts ET</div></div>
       </div>
     </div>
   </div>
@@ -256,32 +260,32 @@
 <!-- CERT BAR -->
 <div class="cert-bar">
   <div class="cert-bar-item">Intuit Certified Bookkeeper</div>
-  <div class="cert-bar-item">QuickBooks Online ProAdvisor</div>
+  <div class="cert-bar-item">QuickBooks Online Certified</div>
   <div class="cert-bar-item">A2X Certified E-commerce Bookkeeper</div>
 </div>
 
-<!-- PROBLEMS -->
+<!-- PROBLEMS — EDITED -->
 <section class="problems">
   <div class="container">
     <div class="eyebrow fade-up">Who this is for</div>
-    <h2 class="section-heading fade-up">If you sell on Amazon or Shopify, there's a good chance your books have hidden errors.</h2>
-    <p style="font-size:0.95rem;color:var(--slate);max-width:560px;line-height:1.7;margin-bottom:0;" class="fade-up">These are the four most common errors in Amazon and Shopify seller files. Each one silently distorts your financials every month.</p>
+    <h2 class="section-heading fade-up">Most Amazon and Shopify seller books have the same errors. They just go unnoticed.</h2>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:560px;line-height:1.7;margin-bottom:0;" class="fade-up">These four issues show up in almost every seller file I review. Each one quietly distorts your numbers every single month.</p>
     <div class="problems-grid fade-up">
       <div class="problem-item">
         <strong>Net deposits recorded as revenue</strong>
-        <p>Amazon pays after deducting fees. Recording the deposit as revenue understates gross income and misses thousands in deductible expenses.</p>
+        <p>Amazon pays you after deducting fees, refunds, and ads. When you record that deposit as revenue, you are understating gross income and missing thousands in deductible expenses your CPA needs to see.</p>
       </div>
       <div class="problem-item">
         <strong>No COGS tracking</strong>
-        <p>Without COGS, your gross margin is meaningless. You cannot price products correctly or know which SKUs are actually profitable.</p>
+        <p>Without cost of goods sold in your books, your gross margin is a guess. You cannot tell which products are profitable, and you cannot make good pricing decisions based on that P&amp;L.</p>
       </div>
       <div class="problem-item">
-        <strong>Sales tax recorded as income</strong>
-        <p>Tax collected on behalf of a state is a liability. When it sits in an income account it overstates revenue and hides what you owe.</p>
+        <strong>Sales tax sitting in an income account</strong>
+        <p>Sales tax collected belongs in a liability account, not income. When it sits in revenue, your numbers are overstated and the amount you actually owe is hidden from your CPA.</p>
       </div>
       <div class="problem-item">
         <strong>Books months behind every year</strong>
-        <p>Every unreconciled month means more errors compounding. Your CPA charges more. Every report you have been looking at is wrong.</p>
+        <p>Every unreconciled month means errors that compound. Your CPA charges more to sort it out at tax time. And every report you have been reading this year is based on bad data.</p>
       </div>
     </div>
     <div class="problems-cta fade-up">
@@ -291,24 +295,24 @@
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES — EDITED -->
 <section class="services" id="services">
   <div class="container">
     <div class="eyebrow fade-up">What we do</div>
     <h2 class="section-heading fade-up">E-commerce bookkeeping services</h2>
-    <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">Every service is built for Amazon FBA and Shopify sellers specifically. Not adapted from general accounting practice.</p>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">Every service is built specifically for Amazon FBA and Shopify sellers. Not adapted from a general accounting practice.</p>
     <div class="services-grid fade-up">
 
       <div class="svc-card audit">
         <div class="svc-icon green">&#128269;</div>
         <div class="svc-free-tag">Free · No Obligation</div>
         <h3>Free Book Audit</h3>
-        <p>A structured review of your existing QuickBooks file across 8 specific areas. Written findings report with the dollar impact of every issue, delivered within 24 hours.</p>
+        <p>A structured review of your existing QuickBooks file across 8 areas. You get a written findings report with every issue clearly spelled out, delivered within 24 hours.</p>
         <ul class="svc-points">
-          <li>Revenue recognition, A2X config, COGS, reconciliation status</li>
+          <li>Revenue recognition, A2X setup, COGS, and reconciliation status</li>
           <li>Sales tax recording and nexus exposure</li>
           <li>Written report in your inbox within 24 hours</li>
-          <li>Read-only access — nothing changed in your file</li>
+          <li>Read-only access, nothing changed in your file</li>
         </ul>
         <a href="https://ecomkeeping.com/bookaudit" class="svc-link">See full details &#8594;</a>
       </div>
@@ -316,12 +320,12 @@
       <div class="svc-card monthly">
         <div class="svc-icon blue">&#128200;</div>
         <h3>Monthly Bookkeeping</h3>
-        <p>Ongoing monthly close for Amazon FBA and Shopify sellers. First month 50% off.</p>
+        <p>Ongoing monthly close for Amazon FBA and Shopify sellers. Your financials delivered by the 5th of every month, with a Loom video walking you through what the numbers mean. First month 50% off.</p>
         <ul class="svc-points">
           <li>P&amp;L, Balance Sheet, Cash Flow, and KPI dashboard</li>
           <li>A2X automation setup and ongoing management</li>
-          <li>Loom video walkthrough of your monthly financials</li>
-          <li>Plans from $449/month — Growth and Scale include check-in calls and WhatsApp support</li>
+          <li>Loom video walkthrough of your monthly numbers</li>
+          <li>Plans from $449/month, Growth and Scale include check-in calls and WhatsApp support</li>
         </ul>
         <a href="https://ecomkeeping.com/monthly" class="svc-link">See plans and pricing &#8594;</a>
       </div>
@@ -329,10 +333,10 @@
       <div class="svc-card cleanup">
         <div class="svc-icon purple">&#128295;</div>
         <h3>Cleanup and Catch-Up</h3>
-        <p>Behind on your books? We clean up any backlog of Amazon and Shopify transactions and deliver a full deliverables package in 3 to 9 business days.</p>
+        <p>Behind on your books? We clean up your backlog of Amazon and Shopify transactions and hand you a complete deliverables package in 3 to 9 business days. Fixed price agreed upfront.</p>
         <ul class="svc-points">
           <li>Full reconciliation, COGS setup, correct settlement recording</li>
-          <li>KPI dashboard, Loom walkthrough, and CPA handoff</li>
+          <li>KPI dashboard, Loom walkthrough, and CPA handoff package</li>
           <li>Fixed price agreed before any work begins</li>
           <li>Starts from $360</li>
         </ul>
@@ -342,7 +346,7 @@
       <div class="svc-card setup">
         <div class="svc-icon amber">&#9881;</div>
         <h3>QuickBooks Online + A2X Setup</h3>
-        <p>Starting fresh or migrating from another system? We build your QBO environment from scratch, configured specifically for e-commerce.</p>
+        <p>Starting fresh or moving from another system? We build your QBO environment from scratch, configured specifically for how e-commerce accounting should actually work.</p>
         <ul class="svc-points">
           <li>E-commerce chart of accounts built from scratch</li>
           <li>A2X fully configured, mapped, and tested</li>
@@ -356,33 +360,33 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- HOW IT WORKS — EDITED -->
 <section class="process">
   <div class="container">
     <div class="eyebrow fade-up">How this works</div>
-    <h2 class="section-heading fade-up">No calls required to get started</h2>
-    <p style="font-size:0.95rem;color:var(--slate);max-width:520px;line-height:1.7;" class="fade-up">Fill a short form. We review within 24 hours. Everything else happens over email or WhatsApp unless you want a call.</p>
+    <h2 class="section-heading fade-up">Simple from the first step</h2>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:520px;line-height:1.7;" class="fade-up">Fill a short form. We review your books within 24 hours and send you a written report. Everything else happens over email or WhatsApp, unless you want a call.</p>
     <div class="process-steps fade-up">
       <div class="step">
         <div class="step-num">1</div>
         <h4>Fill a short form</h4>
-        <p>Tell us your platforms, revenue range, and what is frustrating you. Takes 2 minutes.</p>
+        <p>Tell us your platforms, revenue range, and what is giving you trouble. Takes about 2 minutes.</p>
       </div>
       <div class="step free">
         <div class="step-free-tag">FREE</div>
         <div class="step-num">2</div>
         <h4>We review your QBO</h4>
-        <p>Read-only access. We audit your file and send a written findings report within 24 hours.</p>
+        <p>Read-only access. We go through your file and send a written findings report within 24 hours.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <h4>Review the proposal</h4>
-        <p>Fixed price, clear scope. You approve before any paid work begins. No surprises.</p>
+        <p>Fixed price, clear scope. You approve before any paid work begins. No surprises, no hidden fees.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <h4>Clean books every month</h4>
-        <p>Financials delivered to you. You run the business, we handle the numbers.</p>
+        <p>Financials delivered on time, every month. You run the business, we handle the numbers.</p>
       </div>
     </div>
     <div class="process-cta fade-up">
@@ -391,22 +395,22 @@
   </div>
 </section>
 
-<!-- ABOUT TEASER -->
+<!-- ABOUT TEASER — EDITED -->
 <section class="about-teaser">
   <div class="container">
     <div class="about-teaser-grid">
       <div class="about-photo-wrap fade-up">
         <img src="Founder_EcomKeeping..png" alt="Emmanuel Akam" class="about-photo" />
-        <div class="about-cert-float" style="margin-top:0.8rem;">
+        <div class="about-cert-float">
           <div class="about-cert-dot"></div>
           <span>A2X Certified E-commerce Bookkeeper</span>
         </div>
       </div>
       <div class="about-text fade-up">
         <div class="eyebrow">Who's behind this</div>
-        <h2 class="section-heading" style="color:var(--white);">I built this practice around e-commerce from the beginning.</h2>
-        <p>I am Emmanuel Akam. I created EcomKeeping because I was looking for the intersection of three things I genuinely love: accounting, teaching, and working with people who sell online. I am not a general bookkeeper who adapted to e-commerce. I built this practice around e-commerce from the very beginning.</p>
-        <p>My focus is narrow on purpose so the expertise runs deep. I want to serve 8 to 10 sellers well for years, not hundreds of clients at arm's length.</p>
+        <h2 class="section-heading" style="color:var(--white);">I did not adapt to e-commerce. I started here.</h2>
+        <p>I am Emmanuel Akam. I built EcomKeeping from scratch, trained specifically for Amazon FBA and Shopify bookkeeping before taking on a single client. I chose this specialization on purpose. The narrower the focus, the deeper the expertise.</p>
+        <p>I keep the practice small intentionally. No more than 10 to 14 clients at a time. Every client gets real attention, not a shared inbox and a junior they have never met.</p>
         <div class="about-certs">
           <div class="about-cert-pill">Intuit Certified Bookkeeper</div>
           <div class="about-cert-pill">QuickBooks Online Certified</div>
@@ -418,39 +422,43 @@
   </div>
 </section>
 
-<!-- AVAILABILITY -->
+<!-- AVAILABILITY — EDITED -->
 <section class="availability">
   <div class="container">
     <div class="eyebrow fade-up">Availability</div>
-    <h2 class="section-heading fade-up">Available 8am to 3pm ET, Monday through Friday</h2>
-    <p style="font-size:0.95rem;color:var(--slate);max-width:520px;line-height:1.7;" class="fade-up">Whether you have a question in the morning or need something reviewed in the afternoon, you are covered for the full working window.</p>
+    <h2 class="section-heading fade-up">Your books reconciled before your US day starts</h2>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:560px;line-height:1.7;" class="fade-up">Most bookkeepers work the same hours you do. That means you wait. EcomKeeping works in two windows specifically structured around US seller hours.</p>
     <div class="av-grid fade-up">
       <div class="av-card">
-        <div class="av-time">8 AM to 12 PM ET</div>
-        <div class="av-badge">Morning window</div>
-        <h4>Morning reconciliation and support</h4>
+        <div class="av-time">4 AM to 7 AM ET</div>
+        <div class="av-badge">Overnight window</div>
+        <h4>Your books updated before you open your laptop</h4>
         <ul class="av-list">
           <li>Previous day's Amazon settlements reconciled and recorded</li>
           <li>Shopify payouts matched and cleared</li>
-          <li>Available for calls, questions, and account monitoring</li>
+          <li>Transaction-level bookkeeping tasks completed overnight</li>
+          <li>Any issues flagged before your business day begins</li>
         </ul>
       </div>
       <div class="av-card">
-        <div class="av-time">12 PM to 4 PM ET</div>
-        <div class="av-badge">Afternoon window</div>
-        <h4>Afternoon support and same-day responses</h4>
+        <div class="av-time">9 AM to 3 PM ET</div>
+        <div class="av-badge">Business hours window</div>
+        <h4>Available during your core working hours</h4>
         <ul class="av-list">
           <li>Available for scheduled calls and urgent questions</li>
-          <li>Transaction recording and real-time adjustments</li>
+          <li>Real-time adjustments and transaction recording</li>
           <li>Email responses before end of business</li>
-          <li>Urgent issues flagged with a Loom video</li>
+          <li>Urgent issues flagged with a Loom video walkthrough</li>
         </ul>
       </div>
+    </div>
+    <div class="av-tagline fade-up">
+      <p>"<span>Your Books Reconciled Before Your US Day Starts.</span>"</p>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ — EDITED -->
 <section class="faq">
   <div class="container">
     <div class="eyebrow fade-up" style="text-align:center;">Common questions</div>
@@ -465,10 +473,17 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What hours are you available?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">I work in two windows, Monday through Friday. From 4 AM to 7 AM ET, I reconcile the previous day's transactions so your books are updated before your business day starts. From 9 AM to 3 PM ET, I am available for calls, questions, and real-time support. This means you are covered at the start of your day and throughout your working hours, without waiting for a response the next morning.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">My books are behind. Where do I start?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">Start with the free book audit. It will tell you exactly how far behind the books are and what fixing it involves. If a cleanup is needed first, we scope and price it before any work begins. Monthly bookkeeping starts from a clean foundation once the backlog is cleared.</div>
+        <div class="faq-a">Start with the free book audit. It will show you exactly how far behind the books are and what fixing it involves. If a cleanup is needed first, I scope and price it before any work begins. Monthly bookkeeping starts from a clean foundation once the backlog is cleared.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -482,24 +497,24 @@
           <span class="faq-q-text">Do you handle sales tax filing?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">No. Sales tax filing is a licensed specialist's job. What I do is monitor your nexus exposure, flag when you cross thresholds, and make sure tax collected is recorded as a liability. When it is time to file, your books are clean and the liability is clearly visible for your CPA or sales tax specialist.</div>
+        <div class="faq-a">No. Sales tax filing requires a licensed specialist. What I do is monitor your nexus exposure, flag when you cross thresholds, and make sure tax collected is recorded as a liability in your books. When it is time to file, your books are clean and the liability is clearly visible for your CPA or sales tax specialist.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">What access do you need to my accounts?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">For the free book audit, I need accountant-level read-only access to your QuickBooks Online file. For ongoing monthly bookkeeping, I need full accountant access to QBO and a connection through A2X to your Amazon Seller Central and Shopify accounts. I do not need access to your bank login directly as QBO bank feeds handle that.</div>
+        <div class="faq-a">For the free book audit, I need accountant-level read-only access to your QuickBooks Online file. For ongoing monthly bookkeeping, I need full accountant access to QBO and a connection through A2X to your Amazon Seller Central and Shopify accounts. I do not need direct access to your bank login as QBO bank feeds handle that connection.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- FINAL CTA — EDITED -->
 <section class="cta-final">
   <div class="container">
-    <h2 class="fade-up">Not sure where to start? <em>The audit is free.</em></h2>
-    <p class="fade-up">We review your books, show you exactly what is wrong, and send you a written report within 24 hours. No obligation. No call required. Just a clear picture of where your books actually stand.</p>
+    <h2 class="fade-up">Your books should not be a <em>problem you ignore.</em></h2>
+    <p class="fade-up">The audit is free. We review your QuickBooks file, show you exactly what is wrong, and send a written report within 24 hours. No call required. No obligation. Just a clear picture of where your books actually stand.</p>
     <div class="cta-final-btns fade-up">
       <a href="https://ecomkeeping.com/bookaudit" class="btn-white">Get a Free Book Audit</a>
       <a href="https://calendly.com/emmanuel-ecomkeeping/30min" class="btn-green">Schedule a Call</a>
@@ -508,18 +523,18 @@
       <div class="cta-g">50% off your first month</div>
       <div class="cta-g">No calls required upfront</div>
       <div class="cta-g">No long-term contract</div>
-      <div class="cta-g">Available 8am to 3pm ET</div>
+      <div class="cta-g">Available 4AM to 3PM ET</div>
     </div>
   </div>
 </section>
 
-<!-- CREDENTIALS -->
+<!-- CREDENTIALS — UNTOUCHED -->
 <div class="creds-section">
   <div class="creds-inner">
     <div class="creds-label">Verified Credentials</div>
     <div class="creds-row">
-      <div class="cred-item"><img src="intuit-badge.png" alt="Intuit Bookkeeping Trained" /><div class="cred-name">Intuit Bookkeeping Trained</div></div>
-      <div class="cred-item"><img src="qbo-badge.png" alt="QuickBooks ProAdvisor Certified" /><div class="cred-name">QuickBooks Online Certified</div></div>
+      <div class="cred-item"><img src="intuit-badge.png" alt="Intuit Bookkeeping Trained" /><div class="cred-name">Intuit Certified Bookkeeper</div></div>
+      <div class="cred-item"><img src="qbo-badge.png" alt="QuickBooks Online Certified" /><div class="cred-name">QuickBooks Online Certified</div></div>
       <div class="cred-item"><img src="intuit-proadvisor-badge-tier-silver.png" alt="Intuit ProAdvisor Silver" /><div class="cred-name">Intuit ProAdvisor Silver</div></div>
       <div class="cred-item"><img src="qbo-cas.png" alt="Client Advisory Services Graduate" /><div class="cred-name">Client Advisory Services Graduate</div></div>
       <div class="cred-item"><img src="A2X_badge-certified.png" alt="A2X Certified E-commerce Bookkeeper" /><div class="cred-name">A2X Certified E-commerce Bookkeeper</div></div>
@@ -527,14 +542,15 @@
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER — EDITED -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
       <div>
         <div class="footer-brand-name">Ecom<span>Keeping</span></div>
+        <div class="footer-tagline">Your Books Reconciled Before Your US Day Starts.</div>
         <p class="footer-brand-desc">Specialized bookkeeping for US Amazon FBA and Shopify sellers.</p>
-        <p style="font-size:0.78rem;margin-top:0.8rem;">Available Mon–Fri, 8am–3pm ET</p>
+        <p style="font-size:0.78rem;margin-top:0.8rem;">Available Mon–Fri, 4AM–7AM ET (reconciliation) and 9AM–3PM ET (support)</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -557,7 +573,7 @@
     </div>
     <div class="footer-bottom">
       <p>&#169; 2026 EcomKeeping. All rights reserved.</p>
-      <p>A2X Certified &nbsp;&#183;&nbsp; QuickBooks ProAdvisor &nbsp;&#183;&nbsp; Intuit Certified Bookkeeper</p>
+      <p>A2X Certified &nbsp;&#183;&nbsp; QuickBooks Online Certified &nbsp;&#183;&nbsp; Intuit Certified Bookkeeper</p>
     </div>
   </div>
 </footer>
