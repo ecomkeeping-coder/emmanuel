@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Monthly Bookkeeping — EcomKeeping | Amazon FBA & Shopify Bookkeeping Service</title>
-  <meta name="description" content="Ongoing monthly bookkeeping for Amazon FBA and Shopify sellers. A2X + QuickBooks Online. Accurate P&L, Balance Sheet, and Cash Flow delivered by the 5th of every month." />
+  <meta name="description" content="Ongoing monthly bookkeeping for Amazon FBA and Shopify sellers. A2X and QuickBooks Online. P&L, Balance Sheet, and Cash Flow delivered by the 15th of every month. From $449/month." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -170,6 +170,23 @@
     @media (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr; border: none; gap: 1.2rem; } .plan { border-right: none; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; } .plan.growth { border-color: rgba(16,185,129,0.3); } .plan.scale { border-color: rgba(30,58,138,0.25); } }
     @media (max-width: 768px) { .intro-grid, .ni-grid { grid-template-columns: 1fr; } .del-grid, .how-steps, .os-grid { grid-template-columns: 1fr 1fr; } .hero { padding: 60px 4% 50px; } .discount-banner { flex-direction: column; align-items: flex-start; gap: 0.6rem; } }
     @media (max-width: 560px) { .del-grid, .how-steps, .os-grid { grid-template-columns: 1fr; } }
+
+    /* ── COMPARISON TABLE ── */
+    .cmp-wrap { margin-top: 3rem; }
+    .cmp-title { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 0.3rem; }
+    .cmp-sub { font-size: 0.85rem; color: var(--slate); margin-bottom: 1.4rem; }
+    .cmp-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--white); }
+    table.cmp { width: 100%; border-collapse: collapse; min-width: 620px; }
+    table.cmp th, table.cmp td { padding: 0.72rem 1rem; text-align: left; font-size: 0.82rem; border-bottom: 1px solid var(--border); }
+    table.cmp thead th { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.78rem; color: var(--navy); background: var(--light-bg); white-space: nowrap; }
+    table.cmp thead th:not(:first-child), table.cmp td:not(:first-child) { text-align: center; }
+    table.cmp tbody tr:last-child td { border-bottom: none; }
+    table.cmp td:first-child { color: var(--charcoal); font-weight: 500; }
+    table.cmp .yes { color: var(--emerald-dark); font-weight: 700; }
+    table.cmp .no { color: #CBD5E1; }
+    table.cmp .val { font-weight: 600; color: var(--navy); font-size: 0.8rem; }
+    table.cmp tr.grp td { background: #F1F5FB; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); }
+    .cmp-note { font-size: 0.8rem; color: var(--slate); margin-top: 0.9rem; }
   </style>
 </head>
 <body>
@@ -183,19 +200,18 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-pill">Ongoing Monthly Service · Amazon FBA &amp; Shopify</div>
-    <h1>Accurate books, delivered by the <em>5th of every month.</em> Without exception.</h1>
+    <h1>Accurate books, delivered by the <em>15th of every month.</em></h1>
     <p class="hero-desc">
-      EcomKeeping handles the full monthly close for Amazon FBA and Shopify sellers.
-      Settlements reconciled, COGS tracked, reports produced, and a Loom walkthrough
-      in your inbox before you need to make any business decision for the month.
+      The full monthly close for Amazon FBA and Shopify sellers. Settlements reconciled,
+      COGS tracked, financial statements produced, and a Loom walkthrough in your inbox.
     </p>
     <a href="https://tally.so/r/1AG0x4" class="hero-cta">Get Started</a>
     <p class="hero-cta-note">Fill a short form. No call required unless you want one. First month is 50% off.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-num">5th</div><div class="hero-stat-label">Delivery guarantee</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">15th</div><div class="hero-stat-label">Delivery date, every month</div></div>
       <div class="hero-stat"><div class="hero-stat-num">A2X</div><div class="hero-stat-label">Certified Bookkeeper</div></div>
       <div class="hero-stat"><div class="hero-stat-num">50%</div><div class="hero-stat-label">Off your first month</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">4AM</div><div class="hero-stat-label">Work starts ET</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-label">Clearing account balance</div></div>
     </div>
   </div>
 </section>
@@ -208,22 +224,20 @@
     <div class="intro-grid">
       <div class="intro-text fade-up">
         <p>
-          Monthly bookkeeping for an Amazon and Shopify seller is more complex than most bookkeepers realize.
-          You are dealing with two separate payout structures, two different fee architectures, a COGS layer
-          that moves with every sale, and sales tax obligations that vary by state and platform.
+          An Amazon and Shopify seller has two payout structures, two fee architectures, a COGS layer that
+          moves with every sale, and sales tax obligations that shift by state and platform. Most bookkeepers
+          are not set up for that.
         </p>
         <p>
-          EcomKeeping handles all of it. A2X pulls the full settlement data from Amazon and Shopify into
-          QuickBooks Online with every fee category, refund, and reserve correctly mapped. <strong>You never
-          see a net deposit recorded as revenue.</strong>
+          A2X pulls your full settlement data into QuickBooks Online with every fee, refund, and reserve
+          correctly mapped. <strong>A net deposit never gets recorded as revenue.</strong>
         </p>
         <p>
-          Every month closes with a P&amp;L, Balance Sheet, and Cash Flow statement that are actually accurate.
-          A KPI dashboard showing your real gross margin, ROAS, and AOV. And a plain-English Loom video
+          Each month closes with an accurate P&amp;L, Balance Sheet, and Cash Flow statement, plus a Loom video
           walking through what happened and what needs your attention.
         </p>
         <p>
-          Delivered by the 5th. Every month. Or the next business day if the 5th falls on a weekend or public holiday.
+          Delivered by the 15th, or the next business day if the 15th falls on a weekend or holiday.
         </p>
       </div>
       <div class="intro-callout fade-up">
@@ -249,40 +263,40 @@
 <section class="deliverables">
   <div class="container">
     <div class="eyebrow fade-up">Monthly deliverables</div>
-    <h2 class="section-heading fade-up">What lands in your inbox by the 5th</h2>
+    <h2 class="section-heading fade-up">What lands in your inbox by the 15th</h2>
     <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">
-      Every plan includes the full reporting package. Not summaries. The actual financial statements, a KPI dashboard, and a Loom walkthrough every single month.
+      The actual financial statements, not summaries.
     </p>
     <div class="del-grid">
       <div class="del-card fade-up">
         <div class="del-icon">&#128202;</div>
         <h4>Profit and Loss Statement</h4>
-        <p>Gross Amazon and Shopify sales, every fee category, COGS, and net income. Accurate numbers you can actually make decisions from.</p>
+        <p>Gross Amazon and Shopify sales, every fee category, COGS, and net income.</p>
       </div>
       <div class="del-card fade-up">
         <div class="del-icon">&#9878;</div>
         <h4>Balance Sheet</h4>
-        <p>Inventory asset, Amazon reserve balance, Sales Tax Payable, and all clearing accounts. A real snapshot of where your business stands financially.</p>
+        <p>Inventory asset, Amazon reserve balance, Sales Tax Payable, and all clearing accounts.</p>
       </div>
       <div class="del-card fade-up">
         <div class="del-icon">&#128176;</div>
         <h4>Cash Flow Statement</h4>
-        <p>Where cash came from and where it went. Operating, investing, and financing activities separated clearly for you and your CPA.</p>
+        <p>Where cash came from and where it went. Operating, investing, and financing separated.</p>
       </div>
       <div class="del-card fade-up">
         <div class="del-icon">&#128187;</div>
         <h4>KPI Dashboard</h4>
-        <p>Gross margin, net margin, Amazon and Shopify ROAS, average order value, returns rate, and inventory turnover. Updated monthly with trend data.</p>
+        <p>Gross and net margin, ROAS, average order value, returns rate, inventory turnover. Growth and Scale plans.</p>
       </div>
       <div class="del-card fade-up">
         <div class="del-icon">&#128196;</div>
         <h4>Plain-English Monthly Summary</h4>
-        <p>200 to 300 words. What happened this month, what drove it, one thing to watch, and one action item. Written for business owners, not accountants.</p>
+        <p>What happened, what drove it, one thing to watch, one action item. Written for owners, not accountants.</p>
       </div>
       <div class="del-card fade-up">
         <div class="del-icon">&#127909;</div>
         <h4>Loom Video Walkthrough</h4>
-        <p>3 to 5 minute screen recording walking through your P&amp;L and key numbers. Every month without exception. The most useful 5 minutes you will spend on your finances this month.</p>
+        <p>A 3 to 5 minute screen recording of your P&amp;L and key numbers. Every month, no exceptions.</p>
       </div>
     </div>
   </div>
@@ -292,31 +306,31 @@
 <section class="how">
   <div class="container">
     <div class="eyebrow fade-up">How to get started</div>
-    <h2 class="section-heading fade-up">No calls required. Form first, everything else after.</h2>
+    <h2 class="section-heading fade-up">Four steps. No call required.</h2>
     <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">
-      Fill a short form. I review it within 24 hours and reach out to get your QBO access and confirm the plan. A call is available if you want one but never required.
+      I reply within 24 hours. A call is available if you want one.
     </p>
     <div class="how-steps fade-up">
       <div class="how-step">
         <div class="how-num">1</div>
         <h4>Fill the onboarding form</h4>
-        <p>Tell me your platforms, revenue range, current QBO setup, and any immediate concerns. Takes about 2 minutes.</p>
+        <p>Platforms, revenue range, current QBO setup, immediate concerns. About 2 minutes.</p>
       </div>
       <div class="how-step free-step">
         <div class="free-badge">FREE AUDIT</div>
         <div class="how-num">2</div>
         <h4>I review your QBO file</h4>
-        <p>I get read-only access and do a quick review before we start. If anything needs fixing first, I will tell you upfront before any paid work begins.</p>
+        <p>Read-only access first. If anything needs fixing before we start, you hear it upfront.</p>
       </div>
       <div class="how-step">
         <div class="how-num">3</div>
         <h4>Confirm your plan and pay</h4>
-        <p>I confirm the right plan for your setup and send the invoice. First month is 50% off. Work begins the same day payment clears.</p>
+        <p>I confirm the right plan and invoice at 50% off. Work starts the day payment clears.</p>
       </div>
       <div class="how-step">
         <div class="how-num">4</div>
-        <h4>Receive your books by the 5th</h4>
-        <p>A2X configured, reconciliation running, and your first set of reports in your inbox by the 5th of the following month.</p>
+        <h4>Receive your books by the 15th</h4>
+        <p>A2X configured, reconciliation running, first reports in your inbox by the 15th of the following month.</p>
       </div>
     </div>
   </div>
@@ -327,15 +341,14 @@
   <div class="container">
     <div class="pricing-intro">
       <div class="eyebrow fade-up">Pricing</div>
-      <h2 class="section-heading fade-up">Three plans. Two tiers of service.</h2>
+      <h2 class="section-heading fade-up">Three plans. Priced by channels and volume.</h2>
       <p style="font-size:0.95rem;color:var(--slate);line-height:1.7;" class="fade-up">
-        Starter covers the essentials for single-channel sellers. Growth and Scale deliver the full service.
-        The only difference between Growth and Scale is channel count and transaction volume.
+        Every plan includes the full monthly close. Growth and Scale add the reporting and access layer.
       </p>
     </div>
     <div class="discount-banner fade-up">
       <div class="db-badge">50% off first month</div>
-      <div class="db-text"><strong>Every new client starts at half price.</strong> No catch, no long-term contract. The discount is there so you can evaluate the work before committing to the full rate. Cancel after month one if it is not the right fit.</div>
+      <div class="db-text"><strong>Every new client starts at half price.</strong> Evaluate the work before committing to the full rate. Cancel after month one if it is not a fit.</div>
     </div>
     <div class="pricing-grid fade-up">
 
@@ -351,37 +364,21 @@
             <span class="plan-first-month-then">then $449</span>
           </div>
           <div class="plan-volume">1 sales channel &nbsp;·&nbsp; up to 500 transactions/month</div>
-          <div class="plan-desc">For sellers on Amazon only or Shopify only with straightforward transaction volume.</div>
+          <div class="plan-desc">Amazon only or Shopify only.</div>
         </div>
         <div class="plan-features">
-          <div class="plan-section-label">Reports and reconciliation</div>
+          <div class="plan-section-label">What you get</div>
           <ul class="plan-feature-list">
-            <li><span class="tick">&#10003;</span> Monthly P&amp;L, Balance Sheet, and Cash Flow statements</li>
-            <li><span class="tick">&#10003;</span> A2X automation setup and ongoing management</li>
-            <li><span class="tick">&#10003;</span> Full bank and credit card reconciliation</li>
-            <li><span class="tick">&#10003;</span> COGS tracking and inventory accounting</li>
-            <li><span class="tick">&#10003;</span> Sales tax nexus monitoring and alerts</li>
-            <li><span class="tick">&#10003;</span> Tax-ready books prepared for your CPA</li>
-          </ul>
-          <div class="plan-section-label">Delivery and communication</div>
-          <ul class="plan-feature-list">
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Loom video walkthrough of your monthly financials</span></li>
-            <li><span class="tick">&#10003;</span> Plain-English monthly summary</li>
-            <li><span class="tick">&#10003;</span> Email support, responses within 1 business day</li>
-          </ul>
-          <div class="plan-section-label" style="color:#CBD5E1;">Not included in this plan</div>
-          <ul class="plan-feature-list">
-            <li class="excluded"><span class="cross">&#10007;</span> KPI dashboard with trend reporting</li>
-            <li class="excluded"><span class="cross">&#10007;</span> Product-level profitability reporting</li>
-            <li class="excluded"><span class="cross">&#10007;</span> Weekly transaction summaries</li>
-            <li class="excluded"><span class="cross">&#10007;</span> Monthly and bi-weekly check-in calls</li>
-            <li class="excluded"><span class="cross">&#10007;</span> WhatsApp support</li>
-            <li class="excluded"><span class="cross">&#10007;</span> Priority response</li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">The full monthly close</span> — P&amp;L, Balance Sheet, Cash Flow</li>
+            <li><span class="tick">&#10003;</span> A2X managed, all accounts reconciled</li>
+            <li><span class="tick">&#10003;</span> COGS, inventory, and sales tax handled correctly</li>
+            <li><span class="tick">&#10003;</span> Loom walkthrough and plain-English summary</li>
+            <li><span class="tick">&#10003;</span> Email support, reply within 1 business day</li>
           </ul>
         </div>
         <div class="plan-footer">
           <a href="https://tally.so/r/1AG0x4" class="plan-btn">Get started</a>
-          <div class="plan-footer-note">No long-term contract. Delivered by the 5th or next business day.</div>
+          <div class="plan-footer-note">Delivered by the 15th. No long-term contract.</div>
         </div>
       </div>
 
@@ -397,34 +394,21 @@
             <span class="plan-first-month-then">then $679</span>
           </div>
           <div class="plan-volume">Up to 3 sales channels &nbsp;·&nbsp; up to 2,000 transactions/month</div>
-          <div class="plan-desc">Full service for sellers on Amazon and Shopify together, or expanding to a third channel.</div>
+          <div class="plan-desc">Amazon and Shopify together, or adding a third channel.</div>
         </div>
         <div class="plan-features">
-          <div class="plan-section-label">Reports and reconciliation</div>
+          <div class="plan-section-label">Everything in Starter, plus</div>
           <ul class="plan-feature-list">
-            <li><span class="tick">&#10003;</span> Monthly P&amp;L, Balance Sheet, and Cash Flow statements</li>
-            <li><span class="tick">&#10003;</span> Multi-channel reconciliation across up to 3 platforms</li>
-            <li><span class="tick">&#10003;</span> A2X automation setup and ongoing management</li>
-            <li><span class="tick">&#10003;</span> Full bank and credit card reconciliation</li>
-            <li><span class="tick">&#10003;</span> COGS tracking with <span class="feature-bold">product-level profitability reporting</span></li>
-            <li><span class="tick">&#10003;</span> Inventory turnover and aging analysis</li>
-            <li><span class="tick">&#10003;</span> Sales tax nexus monitoring across all active states</li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">KPI dashboard with trend reporting</span></li>
-            <li><span class="tick">&#10003;</span> Tax-ready books prepared for your CPA</li>
-          </ul>
-          <div class="plan-section-label">Delivery and communication</div>
-          <ul class="plan-feature-list">
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Loom video walkthrough of your monthly financials</span></li>
-            <li><span class="tick">&#10003;</span> Plain-English monthly summary</li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Weekly summary of the prior week's transactions</span></li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Monthly check-in call to review your financials</span></li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Bi-weekly check-in calls</span></li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Priority WhatsApp and email support</span></li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">KPI dashboard</span> with month-on-month trends</li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">Product-level profitability</span> and inventory aging</li>
+            <li><span class="tick">&#10003;</span> Weekly summary of the prior week's transactions</li>
+            <li><span class="tick">&#10003;</span> Monthly and bi-weekly check-in calls</li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">Priority WhatsApp</span> and email support</li>
           </ul>
         </div>
         <div class="plan-footer">
           <a href="https://tally.so/r/1AG0x4" class="plan-btn">Get started</a>
-          <div class="plan-footer-note">No long-term contract. Delivered by the 5th or next business day.</div>
+          <div class="plan-footer-note">Delivered by the 15th. No long-term contract.</div>
         </div>
       </div>
 
@@ -440,42 +424,64 @@
             <span class="plan-first-month-then">then $919</span>
           </div>
           <div class="plan-volume">Up to 5 sales channels &nbsp;·&nbsp; up to 5,000 transactions/month</div>
-          <div class="plan-desc">Same full service as Growth. The only difference is channel count and transaction volume.</div>
+          <div class="plan-desc">Higher volume, more channels, more moving parts.</div>
         </div>
         <div class="plan-features">
-          <div class="plan-section-label">Reports and reconciliation</div>
+          <div class="plan-section-label">Everything in Growth, plus</div>
           <ul class="plan-feature-list">
-            <li><span class="tick">&#10003;</span> Monthly P&amp;L, Balance Sheet, and Cash Flow statements</li>
-            <li><span class="tick">&#10003;</span> Multi-channel reconciliation across up to 5 platforms</li>
-            <li><span class="tick">&#10003;</span> A2X automation setup and ongoing management</li>
-            <li><span class="tick">&#10003;</span> Full bank and credit card reconciliation</li>
-            <li><span class="tick">&#10003;</span> COGS tracking with <span class="feature-bold">product-level profitability reporting</span></li>
-            <li><span class="tick">&#10003;</span> Inventory turnover and aging analysis</li>
-            <li><span class="tick">&#10003;</span> Sales tax nexus monitoring across all active states</li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">KPI dashboard with trend reporting</span></li>
-            <li><span class="tick">&#10003;</span> Tax-ready books coordinated directly with your CPA</li>
-          </ul>
-          <div class="plan-section-label">Delivery and communication</div>
-          <ul class="plan-feature-list">
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Loom video walkthrough of your monthly financials</span></li>
-            <li><span class="tick">&#10003;</span> Plain-English monthly summary</li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Weekly summary of the prior week's transactions</span></li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Monthly check-in call to review your financials</span></li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Bi-weekly check-in calls</span></li>
-            <li><span class="tick">&#10003;</span> <span class="feature-bold">Priority WhatsApp and email support</span></li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">Up to 5 channels</span> and 5,000 transactions a month</li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">Direct coordination with your CPA</span> at year end</li>
+            <li><span class="tick">&#10003;</span> Channel-split reporting across every platform</li>
+            <li><span class="tick">&#10003;</span> Same-day response on anything urgent</li>
           </ul>
         </div>
         <div class="plan-footer">
           <a href="https://tally.so/r/1AG0x4" class="plan-btn">Get started</a>
-          <div class="plan-footer-note">No long-term contract. Delivered by the 5th or next business day.</div>
+          <div class="plan-footer-note">Delivered by the 15th. No long-term contract.</div>
         </div>
       </div>
 
     </div>
-    <p style="font-size:0.84rem;color:var(--slate);text-align:center;margin-top:1.6rem;" class="fade-up">
-      Need a cleanup or QBO setup before starting monthly service?
-      <a href="https://ecomkeeping.com/cleanup" style="color:var(--navy);font-weight:600;">See the cleanup service</a> or <a href="mailto:emmanuel@ecomkeeping.com" style="color:var(--navy);font-weight:600;">send a message</a>.
-    </p>
+
+    <!-- COMPARISON TABLE -->
+    <div class="cmp-wrap fade-up">
+      <div class="cmp-title">Full comparison</div>
+      <div class="cmp-sub">Every line, side by side.</div>
+      <div class="cmp-scroll">
+        <table class="cmp">
+          <thead>
+            <tr><th>&nbsp;</th><th>Starter<br /><span style="font-weight:500;color:var(--slate);">$449</span></th><th>Growth<br /><span style="font-weight:500;color:var(--slate);">$679</span></th><th>Scale<br /><span style="font-weight:500;color:var(--slate);">$919</span></th></tr>
+          </thead>
+          <tbody>
+            <tr class="grp"><td colspan="4">Limits</td></tr>
+            <tr><td>Sales channels</td><td class="val">1</td><td class="val">Up to 3</td><td class="val">Up to 5</td></tr>
+            <tr><td>Transactions per month</td><td class="val">500</td><td class="val">2,000</td><td class="val">5,000</td></tr>
+
+            <tr class="grp"><td colspan="4">The monthly close</td></tr>
+            <tr><td>P&amp;L, Balance Sheet, Cash Flow</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>A2X setup and ongoing management</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Bank, card, and clearing account reconciliation</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>COGS tracking and inventory accounting</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Sales tax nexus monitoring</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Tax-ready books for your CPA</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+
+            <tr class="grp"><td colspan="4">Reporting</td></tr>
+            <tr><td>Loom walkthrough and written summary</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>KPI dashboard with trend reporting</td><td class="no">&mdash;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Product-level profitability</td><td class="no">&mdash;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Inventory turnover and aging</td><td class="no">&mdash;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Weekly transaction summary</td><td class="no">&mdash;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+
+            <tr class="grp"><td colspan="4">Access</td></tr>
+            <tr><td>Support channel</td><td class="val">Email</td><td class="val">WhatsApp + email</td><td class="val">WhatsApp + email</td></tr>
+            <tr><td>Response time</td><td class="val">1 business day</td><td class="val">Priority</td><td class="val">Same day</td></tr>
+            <tr><td>Check-in calls</td><td class="no">&mdash;</td><td class="val">Monthly + bi-weekly</td><td class="val">Monthly + bi-weekly</td></tr>
+            <tr><td>Direct CPA coordination</td><td class="no">&mdash;</td><td class="no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cmp-note">Over the transaction or channel limit? Send a message and I will quote it. Need a cleanup or QBO setup first? <a href="https://ecomkeeping.com/cleanup" style="color:var(--navy);font-weight:600;">See the cleanup service</a>.</p>
+    </div>
   </div>
 </section>
 
@@ -487,7 +493,7 @@
     <div class="ni-grid">
       <div>
         <p style="font-size:0.95rem;color:var(--slate);line-height:1.7;margin-bottom:1.5rem;" class="fade-up">
-          EcomKeeping is a specialist bookkeeping service. The following are outside scope and require a different professional.
+          The following need a different professional. I will point you to the right one.
         </p>
         <ul class="ni-list fade-up">
           <li>Tax preparation and filing (your CPA or enrolled agent)</li>
@@ -502,15 +508,13 @@
       <div class="ni-note fade-up">
         <h4>A note on sales tax</h4>
         <p>
-          Sales tax monitoring is included in every plan. That means tracking which states you have economic
-          nexus in, flagging when you cross a threshold, and making sure sales tax collected is recorded
-          correctly as a liability and not as income.
+          Monitoring is included in every plan: tracking where you have economic nexus, flagging when you
+          cross a threshold, and keeping tax collected in a liability account rather than income.
         </p>
         <br/>
         <p>
-          Filing and remitting sales tax requires a licensed specialist.
-          EcomKeeping does not file sales tax returns. What I hand you and your CPA is a clean
-          Sales Tax Payable balance with a clear breakdown by state.
+          Filing and remitting is a licensed specialist's job, and I do not do it. What you and your CPA get
+          is a clean Sales Tax Payable balance broken down by state.
         </p>
       </div>
     </div>
@@ -528,49 +532,49 @@
           <span class="faq-q-text">Do I need to get on a call to start?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">No. Fill the onboarding form and I will reach out within 24 hours. Everything from there happens over email or WhatsApp. A call is available if you want one but never required to get started. Most clients are fully onboarded without ever needing a call.</div>
+        <div class="faq-a">No. Fill the onboarding form and I will reach out within 24 hours. Everything from there runs over email or WhatsApp. A call is available if you want one, never required.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">What hours are you available?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">I work in two windows, Monday through Friday. From 4 AM to 7 AM ET, I reconcile the previous day's transactions so your books are updated before your business day starts. From 9 AM to 3 PM ET, I am available for calls, questions, and anything that needs real-time attention. This means you are covered at the start of your day and throughout your working hours, without waiting until the next morning for a response.</div>
+        <div class="faq-a">8:00 to 17:00 UTC, Monday to Friday. Messages sent outside those hours get a reply the next working day. If something is urgent, flag it and I will prioritise it.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">My books are behind. Can I still start monthly bookkeeping?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">Not directly. If your books are more than one month behind, the right starting point is a cleanup project. Once the backlog is cleared and A2X is running correctly, the monthly service starts from a clean foundation. Starting monthly bookkeeping on top of a messy backlog just creates more problems down the line. See the cleanup service page for how that works.</div>
+        <div class="faq-a">Not directly. More than one month behind and the right starting point is a cleanup. Monthly bookkeeping stacked on a messy backlog just compounds the problem. See the cleanup page for how that works.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">What do you need from me each month?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">The main requirement is active bank feed access in QBO. If your QBO bank connection is live, I can pull everything I need without manual statement uploads. The only time I need something from you is if a transaction is unusual or unclear, a new payment gateway is added, or product costs have changed. I will ask specific questions when I need something rather than sending a long checklist every month.</div>
+        <div class="faq-a">Active bank feeds in QBO, and that is mostly it. I only come back to you when a transaction is unclear, a new payment gateway appears, or product costs change. Specific questions, not a monthly checklist.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">What if I do not have QuickBooks Online or A2X set up?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">You need a QBO subscription and A2X before monthly bookkeeping begins. If you do not have these set up, the QBO and A2X setup is a separate one-time service that gets everything configured correctly. It is better to set these up right from day one than to fix a broken setup later.</div>
+        <div class="faq-a">Both need to be in place before monthly bookkeeping starts. If they are not, the QBO and A2X setup is a separate one-time service. Building it right is cheaper than fixing it later.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">What happens if you miss the 5th deadline?</span>
+          <span class="faq-q-text">What happens if you miss the 15th?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">Missing the 5th is treated seriously. The close process starts on the 1st specifically so there is time to handle anything unexpected. If delivery is going to be delayed for any reason, I will tell you in writing before the 5th with a specific revised date. Delivery is contingent on bank feed access being active and any required information provided by the 2nd. If those conditions are met and I miss the deadline, that is on me and I will address it directly.</div>
+        <div class="faq-a">The close starts on the 1st, which leaves room for the unexpected. If delivery will slip, you get it in writing before the 15th with a revised date. Delivery assumes live bank feeds and any information I ask for by the 5th. If those are met and I still miss it, that is on me.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">Is there a long-term contract?</span>
           <span class="faq-chevron">&#9660;</span>
         </button>
-        <div class="faq-a">No. Month-to-month. First month is 50% off so you can evaluate the work before committing to the full rate. If it is not working after month one, you do not continue. I would rather earn the relationship every month than lock anyone in.</div>
+        <div class="faq-a">No. Month-to-month, first month at 50% off so you can judge the work before paying full rate. I would rather earn it every month than lock anyone in.</div>
       </div>
     </div>
   </div>
@@ -579,14 +583,14 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2 class="fade-up">Clean books. <em>Delivered by the 5th.</em> Every month.</h2>
-    <p class="fade-up">First month is 50% off. No long-term contract. Fill a short form and I will reach out within 24 hours to get you set up.</p>
+    <h2 class="fade-up">Clean books. <em>Delivered by the 15th.</em> Every month.</h2>
+    <p class="fade-up">First month 50% off. No long-term contract. Fill the form and I will reach out within 24 hours.</p>
     <a href="https://tally.so/r/1AG0x4" class="cta-btn fade-up">Get Started</a>
     <div class="cta-guarantees fade-up">
       <div class="cta-g">50% off your first month</div>
       <div class="cta-g">No calls required upfront</div>
       <div class="cta-g">No long-term contract</div>
-      <div class="cta-g">Delivered by the 5th, every month</div>
+      <div class="cta-g">Delivered by the 15th, every month</div>
     </div>
   </div>
 </section>
@@ -600,19 +604,19 @@
       <div class="os-card">
         <div class="os-icon">&#128269;</div>
         <h4>Free Book Audit</h4>
-        <p>Not sure if your current books are accurate? We review your QBO file for free across 8 specific areas and send a written findings report within 24 hours.</p>
+        <p>An 8-area review of your QBO file with a written findings report in 24 hours. Free, read-only, no obligation.</p>
         <a href="https://ecomkeeping.com/bookaudit" class="os-link">Learn more &#8594;</a>
       </div>
       <div class="os-card">
         <div class="os-icon">&#128295;</div>
         <h4>Cleanup and Catch-Up</h4>
-        <p>Behind on your books? We clean up any backlog of Amazon and Shopify transactions and deliver tax-ready financials in 3 to 9 business days.</p>
+        <p>Any backlog cleared and tax-ready financials delivered in 1 to 4 weeks. Fixed price, from $360.</p>
         <a href="https://ecomkeeping.com/cleanup" class="os-link">Learn more &#8594;</a>
       </div>
       <div class="os-card">
         <div class="os-icon">&#9881;</div>
         <h4>QuickBooks Online + A2X Setup</h4>
-        <p>Starting fresh or migrating? We build your QBO environment from scratch, configured for e-commerce. The right foundation before monthly bookkeeping begins.</p>
+        <p>Your QBO file built from scratch and configured for e-commerce. The right foundation before monthly work begins.</p>
         <a href="mailto:emmanuel@ecomkeeping.com" class="os-link">Get a quote &#8594;</a>
       </div>
     </div>
