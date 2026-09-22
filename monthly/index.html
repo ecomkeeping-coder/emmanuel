@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monthly Ecommerce Bookkeeping for UK Sellers | EcomKeeping</title>
-  <meta name="description" content="Monthly bookkeeping for UK ecommerce businesses selling on Amazon, Shopify and other channels. Clear reports, stock and cost of sales tracking, and personal support." />
+  <title>Monthly Bookkeeping — EcomKeeping | Amazon FBA & Shopify Bookkeeping Service</title>
+  <meta name="description" content="Ongoing monthly bookkeeping for Amazon FBA and Shopify sellers. A2X and QuickBooks Online. P&L, Balance Sheet, and Cash Flow delivered by the 15th of every month. From $449/month." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -75,22 +75,485 @@
     .db-badge { background: var(--emerald); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.82rem; padding: 0.3rem 0.8rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
     .db-text { font-size: 0.88rem; color: #065F46; line-height: 1.5; }
     .db-text strong { font-weight: 700; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
     .plan { display: flex; flex-direction: column; border-right: 1px solid var(--border); }
     .plan:last-child { border-right: none; }
     .plan-header { padding: 1.8rem 1.8rem 1.4rem; border-bottom: 1px solid var(--border); }
     .plan.starter .plan-header { background: var(--light-bg); }
     .plan.growth .plan-header { background: linear-gradient(135deg, #F0FDF9, #ECFDF5); border-bottom-color: rgba(16,185,129,0.15); }
-    .plan.scale .plan-header { background: linear-gradient(135deg, #1E3A8A, #2d5cc8); }
     .plan-tier-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.2rem; }
     .plan.growth .plan-tier-label { color: var(--emerald-dark); }
-    .plan.scale .plan-tier-label { color: rgba(255,255,255,0.55); }
     .plan-name { font-size: 1.3rem; font-weight: 900; color: var(--navy); margin-bottom: 0.3rem; }
-    .plan.scale .plan-name { color: var(--white); }
     .plan-amount { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--navy); line-height: 1; }
-    .plan.scale .plan-amount { color: var(--white); }
     .plan-amount sup { font-size: 1rem; vertical-align: top; margin-top: 0.45rem; display: inline-block; }
     .plan-amount sub { font-size: 0.8rem; font-weight: 500; color: var(--slate); }
-    .plan.scale .plan-amount sub { color: rgba(255,255,255,0.55); }
     .plan-first-month { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.4rem; margin-bottom: 0.5rem; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25); border-radius: 5px; padding: 0.25rem 0.6rem; width: fit-content; }
-    .plan.scale .plan-first-month { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2); }
+    .plan-first-month-label { font-size: 0.68rem; color: var(--emerald-dark); font-weight: 600; }
+    .plan-first-month-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.88rem; color: var(--emerald-dark); }
+    .plan-first-month-then { font-size: 0.65rem; color: var(--slate); }
+    .plan-volume { font-size: 0.76rem; color: var(--slate); margin-bottom: 0.7rem; font-weight: 500; }
+    .plan-desc { font-size: 0.79rem; color: var(--slate); line-height: 1.5; padding-top: 0.7rem; border-top: 1px solid var(--border); }
+    .plan.growth .plan-desc { border-top-color: rgba(16,185,129,0.15); }
+    .plan-features { padding: 1.6rem 1.8rem; flex: 1; }
+    .plan-section-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 0.9rem; margin-top: 1.2rem; }
+    .plan-section-label:first-child { margin-top: 0; }
+    .plan-feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .plan-feature-list li { font-size: 0.82rem; color: var(--charcoal); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.45; }
+    .plan-feature-list li .tick { color: var(--emerald); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; font-size: 0.72rem; }
+    .plan-feature-list li .cross { color: #CBD5E1; flex-shrink: 0; margin-top: 0.05rem; font-size: 0.72rem; }
+    .plan-feature-list li.excluded { color: var(--slate-light); }
+    .feature-bold { font-weight: 600; color: var(--navy); }
+    .plan-footer { padding: 1.4rem 1.8rem 1.8rem; border-top: 1px solid var(--border); }
+    .plan-btn { display: block; width: 100%; text-align: center; padding: 0.75rem; border-radius: 7px; font-weight: 600; font-size: 0.87rem; transition: all 0.2s; }
+    .plan.starter .plan-btn { border: 2px solid var(--navy); color: var(--navy); }
+    .plan.starter .plan-btn:hover { background: var(--navy); color: var(--white); }
+    .plan.growth .plan-btn { background: var(--emerald); color: var(--white); }
+    .plan.growth .plan-btn:hover { background: var(--emerald-dark); }
+    .plan-footer-note { font-size: 0.72rem; color: var(--slate-light); text-align: center; margin-top: 0.7rem; line-height: 1.45; }
+    .faq { padding: 80px 5%; background: var(--white); }
+    .faq-list { max-width: 720px; margin: 2.5rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: none; border: none; padding: 1.2rem 1.5rem; text-align: left; cursor: pointer; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .faq-q-text { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--navy); line-height: 1.4; }
+    .faq-chevron { width: 20px; height: 20px; border-radius: 50%; background: var(--light-bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.6rem; color: var(--slate); transition: transform 0.25s, background 0.2s; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); background: var(--emerald); color: var(--white); border-color: var(--emerald); }
+    .faq-a { display: none; padding: 0 1.5rem 1.2rem; font-size: 0.86rem; color: var(--slate); line-height: 1.7; border-top: 1px solid var(--border); }
+    .faq-item.open .faq-a { display: block; }
+    .cta-section { padding: 90px 5%; background: linear-gradient(150deg, #0f2360 0%, var(--navy) 60%, #1a4ea8 100%); text-align: center; }
+    .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: var(--white); margin-bottom: 1rem; letter-spacing: -0.02em; line-height: 1.2; }
+    .cta-section h2 em { color: var(--emerald); font-style: normal; }
+    .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.05rem; box-shadow: 0 4px 28px rgba(16,185,129,0.5); transition: all 0.2s; }
+    .cta-btn:hover { background: var(--emerald-dark); transform: translateY(-2px); }
+    .cta-guarantees { display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1.8rem; flex-wrap: wrap; }
+    .cta-g { font-size: 0.78rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 0.4rem; }
+    .cta-g::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
+    .other-services { padding: 70px 5%; background: var(--light-bg); }
+    .os-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+    .os-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: all 0.2s; display: flex; flex-direction: column; }
+    .os-card:hover { box-shadow: 0 4px 20px rgba(30,58,138,0.1); transform: translateY(-2px); }
+    .os-icon { font-size: 1.3rem; margin-bottom: 0.7rem; }
+    .os-card h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.4rem; }
+    .os-card p { font-size: 0.82rem; color: var(--slate); line-height: 1.6; flex: 1; margin-bottom: 1.2rem; }
+    .os-link { font-size: 0.82rem; font-weight: 600; color: var(--emerald); display: inline-flex; align-items: center; gap: 0.3rem; transition: gap 0.2s; }
+    .os-link:hover { gap: 0.5rem; }
+    .page-footer { background: var(--charcoal); padding: 1.8rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+    .pf-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+    .pf-brand span { color: var(--emerald); }
+    .pf-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .pf-links a { font-size: 0.78rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+    .pf-links a:hover { color: var(--emerald); }
+    .pf-copy { font-size: 0.72rem; color: rgba(255,255,255,0.35); }
+    @media (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr; border: none; gap: 1.2rem; } .plan { border-right: none; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; } .plan.growth { border-color: rgba(16,185,129,0.3); } }
+    @media (max-width: 768px) { .intro-grid { grid-template-columns: 1fr; } .del-grid, .how-steps, .os-grid { grid-template-columns: 1fr 1fr; } .hero { padding: 60px 4% 50px; } .discount-banner { flex-direction: column; align-items: flex-start; gap: 0.6rem; } }
+    @media (max-width: 560px) { .del-grid, .how-steps, .os-grid { grid-template-columns: 1fr; } }
+
+    /* ── COMPARISON TABLE ── */
+    .cmp-wrap { margin-top: 3rem; }
+    .cmp-title { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 0.3rem; }
+    .cmp-sub { font-size: 0.85rem; color: var(--slate); margin-bottom: 1.4rem; }
+    .cmp-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--white); }
+    table.cmp { width: 100%; border-collapse: collapse; min-width: 620px; }
+    table.cmp th, table.cmp td { padding: 0.72rem 1rem; text-align: left; font-size: 0.82rem; border-bottom: 1px solid var(--border); }
+    table.cmp thead th { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.78rem; color: var(--navy); background: var(--light-bg); white-space: nowrap; }
+    table.cmp thead th:not(:first-child), table.cmp td:not(:first-child) { text-align: center; }
+    table.cmp tbody tr:last-child td { border-bottom: none; }
+    table.cmp td:first-child { color: var(--charcoal); font-weight: 500; }
+    table.cmp .yes { color: var(--emerald-dark); font-weight: 700; }
+    table.cmp .no { color: #CBD5E1; }
+    table.cmp .val { font-weight: 600; color: var(--navy); font-size: 0.8rem; }
+    table.cmp tr.grp td { background: #F1F5FB; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); }
+    .cmp-note { font-size: 0.8rem; color: var(--slate); margin-top: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Ecom<span>Keeping</span></div>
+  <a href="https://ecomkeeping.com" class="nav-back">&#8592; Back to main site</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-pill">Ongoing Monthly Service · Amazon FBA &amp; Shopify</div>
+    <h1>Know what your shop is <em>really earning.</em></h1>
+    <p class="hero-desc">
+      Monthly bookkeeping for Amazon FBA and Shopify sellers. Sales and fees recorded properly,
+      stock costs tracked, and clear reports that help you understand your business.
+    </p>
+    <a href="https://tally.so/r/1AG0x4" class="hero-cta">Get Started</a>
+    <p class="hero-cta-note">Tell me about your business. We can start by email, or arrange a call if you prefer.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">15th</div><div class="hero-stat-label">Delivery date, every month</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">A2X</div><div class="hero-stat-label">Certified Bookkeeper</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">50%</div><div class="hero-stat-label">Off your first month</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Monthly</div><div class="hero-stat-label">Reports and a review call</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <div class="eyebrow fade-up">What this service is</div>
+    <h2 class="section-heading fade-up">Your sales are only part of the picture.</h2>
+    <div class="intro-grid">
+      <div class="intro-text fade-up">
+        <p>
+          Between marketplace fees, refunds, supplier bills and stock purchases, it can be hard to see
+          what is left. I bring those figures together so you can understand what your business is earning.
+        </p>
+        <p>
+          I use A2X or Link My Books to bring your sales data into QuickBooks Online, then reconcile
+          your accounts and manage inventory and cost of goods sold. <strong>Your payout is matched to the sales, fees and refunds behind it.</strong>
+        </p>
+        <p>
+          You receive a P&amp;L, Balance Sheet and Cash Flow statement, with a plain-English summary
+          and a monthly call to talk through your results.
+        </p>
+        <p>
+          Reports are delivered by the 15th of the following month, with the records needed to close your books received by the 5th.
+        </p>
+      </div>
+      <div class="intro-callout fade-up">
+        <h3>What every monthly close produces</h3>
+        <ul class="ic-list">
+          <li>Gross revenue correctly split across Amazon and Shopify</li>
+          <li>Every Amazon fee category separated and recorded</li>
+          <li>COGS tracked and inventory asset updated on the Balance Sheet</li>
+          <li>Bank, card and clearing accounts reconciled; any outstanding balances explained</li>
+          <li>Sales tax correctly classified as a liability, not income</li>
+          <li>Amazon reserve balance reconciled to your Seller Central account</li>
+          <li>P&amp;L, Balance Sheet, and Cash Flow exported and delivered</li>
+          <li>Plain-English summary of your monthly results</li>
+          <li>Monthly call to discuss your reports</li>
+          <li>Year-end accountant coordination included in Growth</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="deliverables">
+  <div class="container">
+    <div class="eyebrow fade-up">Monthly deliverables</div>
+    <h2 class="section-heading fade-up">Your monthly reports, explained clearly</h2>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">
+      Financial statements and a written explanation of what changed and what needs your attention.
+    </p>
+    <div class="del-grid">
+      <div class="del-card fade-up">
+        <div class="del-icon">&#128202;</div>
+        <h4>Profit and Loss Statement</h4>
+        <p>Gross Amazon and Shopify sales, every fee category, COGS, and net income.</p>
+      </div>
+      <div class="del-card fade-up">
+        <div class="del-icon">&#9878;</div>
+        <h4>Balance Sheet</h4>
+        <p>Inventory asset, Amazon reserve balance, Sales Tax Payable, and all clearing accounts.</p>
+      </div>
+      <div class="del-card fade-up">
+        <div class="del-icon">&#128176;</div>
+        <h4>Cash Flow Statement</h4>
+        <p>Where cash came from and where it went. Operating, investing, and financing separated.</p>
+      </div>
+      <div class="del-card fade-up">
+        <div class="del-icon">&#128187;</div>
+        <h4>KPI Dashboard</h4>
+        <p>Gross and net margin, ROAS, average order value, returns rate, inventory turnover. Growth plan only.</p>
+      </div>
+      <div class="del-card fade-up">
+        <div class="del-icon">&#128196;</div>
+        <h4>Plain-English Monthly Summary</h4>
+        <p>What happened, what drove it, one thing to watch, one action item. Written for owners, not accountants.</p>
+      </div>
+      <div class="del-card fade-up">
+        <div class="del-icon">&#127909;</div>
+        <h4>Monthly Review Call</h4>
+        <p>A monthly conversation to go through your reports, answer questions and discuss anything that needs attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONBOARDING -->
+<section class="how">
+  <div class="container">
+    <div class="eyebrow fade-up">How to get started</div>
+    <h2 class="section-heading fade-up">Let’s start with your business.</h2>
+    <p style="font-size:0.95rem;color:var(--slate);max-width:540px;line-height:1.7;" class="fade-up">
+      Fill in the form and I will reply within one business day. We can arrange a call if you prefer.
+    </p>
+    <div class="how-steps fade-up">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <h4>Fill the onboarding form</h4>
+        <p>Platforms, revenue range, current QBO setup, immediate concerns. About 2 minutes.</p>
+      </div>
+      <div class="how-step free-step">
+        <div class="free-badge">FREE AUDIT</div>
+        <div class="how-num">2</div>
+        <h4>I review your QBO file</h4>
+        <p>I review your setup without making changes. You hear about any work needed before we start.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <h4>Confirm your plan and pay</h4>
+        <p>I confirm the right plan and invoice at 50% off. Work starts the day payment clears.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">4</div>
+        <h4>Receive your books by the 15th</h4>
+        <p>A2X configured, reconciliation running, first reports in your inbox by the 15th of the following month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-intro">
+      <div class="eyebrow fade-up">Pricing</div>
+      <h2 class="section-heading fade-up">Two plans. Choose the support you need.</h2>
+      <p style="font-size:0.95rem;color:var(--slate);line-height:1.7;" class="fade-up">
+        Both plans cover your monthly books. Growth adds a KPI dashboard and more frequent updates.
+      </p>
+    </div>
+    <div class="discount-banner fade-up">
+      <div class="db-badge">50% off first month</div>
+      <div class="db-text"><strong>Every new client starts at half price.</strong> Evaluate the work before committing to the full rate. Cancel after month one if it is not a fit.</div>
+    </div>
+    <div class="pricing-grid fade-up">
+
+      <!-- STARTER -->
+      <div class="plan starter">
+        <div class="plan-header">
+          <div class="plan-tier-label">Monthly Support</div>
+          <div class="plan-name">Starter</div>
+          <div class="plan-amount"><sup>$</sup>449<sub>/month</sub></div>
+          <div class="plan-first-month">
+            <span class="plan-first-month-label">First month</span>
+            <span class="plan-first-month-price">$224.50</span>
+            <span class="plan-first-month-then">then $449</span>
+          </div>
+          <div class="plan-volume">Up to 2 sales channels &nbsp;·&nbsp; up to 1,000 transactions/month</div>
+          <div class="plan-desc">For sellers who need reliable monthly books and someone to talk them through.</div>
+        </div>
+        <div class="plan-features">
+          <div class="plan-section-label">What you get</div>
+          <ul class="plan-feature-list">
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">The full monthly close</span> — P&amp;L, Balance Sheet, Cash Flow</li>
+            <li><span class="tick">&#10003;</span> A2X or Link My Books managed, accounts reconciled</li>
+            <li><span class="tick">&#10003;</span> COGS, inventory, and sales tax handled correctly</li>
+            <li><span class="tick">&#10003;</span> Plain-English report summary and monthly call</li>
+            <li><span class="tick">&#10003;</span> Slack and email support, reply within 1 business day</li>
+          </ul>
+        </div>
+        <div class="plan-footer">
+          <a href="https://tally.so/r/1AG0x4" class="plan-btn">Get started</a>
+          <div class="plan-footer-note">Delivered by the 15th. No long-term contract.</div>
+        </div>
+      </div>
+
+      <!-- GROWTH -->
+      <div class="plan growth">
+        <div class="plan-header">
+          <div class="plan-tier-label">More Frequent Support</div>
+          <div class="plan-name">Growth</div>
+          <div class="plan-amount"><sup>$</sup>695<sub>/month</sub></div>
+          <div class="plan-first-month">
+            <span class="plan-first-month-label">First month</span>
+            <span class="plan-first-month-price">$347.50</span>
+            <span class="plan-first-month-then">then $695</span>
+          </div>
+          <div class="plan-volume">Up to 5 sales channels &nbsp;·&nbsp; up to 5,000 transactions/month</div>
+          <div class="plan-desc">For businesses that need more channel coverage and regular updates.</div>
+        </div>
+        <div class="plan-features">
+          <div class="plan-section-label">Everything in Starter, plus</div>
+          <ul class="plan-feature-list">
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">KPI dashboard</span> with month-on-month trends</li>
+            <li><span class="tick">&#10003;</span> Year-end coordination with your accountant</li>
+            <li><span class="tick">&#10003;</span> Weekly written updates on your books</li>
+            <li><span class="tick">&#10003;</span> Optional weekly check-in calls</li>
+            <li><span class="tick">&#10003;</span> <span class="feature-bold">Priority Slack</span> and email support</li>
+          </ul>
+        </div>
+        <div class="plan-footer">
+          <a href="https://tally.so/r/1AG0x4" class="plan-btn">Get started</a>
+          <div class="plan-footer-note">Delivered by the 15th. No long-term contract.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="cmp-wrap fade-up">
+      <div class="cmp-title">Full comparison</div>
+      <div class="cmp-sub">Every line, side by side.</div>
+      <div class="cmp-scroll">
+        <table class="cmp">
+          <thead>
+            <tr><th>&nbsp;</th><th>Starter<br /><span style="font-weight:500;color:var(--slate);">$449</span></th><th>Growth<br /><span style="font-weight:500;color:var(--slate);">$695</span></th></tr>
+          </thead>
+          <tbody>
+            <tr class="grp"><td colspan="3">Limits</td></tr>
+            <tr><td>Sales channels</td><td class="val">Up to 2</td><td class="val">Up to 5</td></tr>
+            <tr><td>Transactions per month</td><td class="val">1,000</td><td class="val">5,000</td></tr>
+
+            <tr class="grp"><td colspan="3">The monthly close</td></tr>
+            <tr><td>P&amp;L, Balance Sheet, Cash Flow</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>A2X or Link My Books ongoing management</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Bank, card, and clearing account reconciliation</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>COGS tracking and inventory accounting</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Tax-ready books for your CPA</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+
+            <tr class="grp"><td colspan="3">Reporting</td></tr>
+            <tr><td>Monthly review call and written summary</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>KPI dashboard with trend reporting</td><td class="no">&mdash;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Weekly transaction summary</td><td class="no">&mdash;</td><td class="yes">&#10003;</td></tr>
+
+            <tr class="grp"><td colspan="3">Access</td></tr>
+            <tr><td>Support channel</td><td class="val">Slack + email</td><td class="val">Slack + email</td></tr>
+            <tr><td>Response time</td><td class="val">1 business day</td><td class="val">Priority</td></tr>
+            <tr><td>Check-in calls</td><td class="val">Monthly</td><td class="val">Optional weekly calls</td></tr>
+            <tr><td>Year-end accountant coordination</td><td class="no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cmp-note">I confirm what counts towards your transaction limit in the proposal. Message me on Slack or email at any time; replies are during working hours, with priority for Growth. Need a cleanup or QBO setup first? <a href="https://ecomkeeping.com/cleanup" style="color:var(--navy);font-weight:600;">See the cleanup service</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="eyebrow fade-up" style="text-align:center;">Common questions</div>
+    <h2 class="section-heading fade-up" style="text-align:center;">Before you get started</h2>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do I need to get on a call to start?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">No. Fill the onboarding form and I will reach out within 24 hours. We can work through the details by email. A call is available if you would find it helpful.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What hours are you available?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">8:00 to 17:00 UTC, Monday to Friday. Messages sent outside those hours get a reply the next working day. If something is urgent, flag it and I will prioritise it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">My books are behind. Can I still start monthly bookkeeping?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">Not directly. More than one month behind and the right starting point is a cleanup. Monthly bookkeeping stacked on a messy backlog just compounds the problem. See the cleanup page for how that works.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What do you need from me each month?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">Access to your bookkeeping and sales data, bank and card statements, and up-to-date stock and product costs. I flag missing information and ask about anything unclear.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What if my bookkeeping software or sales integration is not set up?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">I review what is needed and quote any initial setup separately. I can work with A2X or Link My Books, and confirm software subscription costs in your proposal.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What happens if you miss the 15th?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">The close starts on the 1st, which leaves room for the unexpected. If delivery will slip, you get it in writing before the 15th with a revised date. Delivery assumes live bank feeds and any information I ask for by the 5th. If those are met and I still miss it, that is on me.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is there a long-term contract?</span>
+          <span class="faq-chevron">&#9660;</span>
+        </button>
+        <div class="faq-a">No. Month-to-month, first month at 50% off so you can judge the work before paying full rate. I would rather earn it every month than lock anyone in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="fade-up">Your monthly books. <em>One less thing to manage.</em></h2>
+    <p class="fade-up">Tell me where you sell and how you manage your books. I will reply within one business day with the next step.</p>
+    <a href="https://tally.so/r/1AG0x4" class="cta-btn fade-up">Get Started</a>
+    <div class="cta-guarantees fade-up">
+      <div class="cta-g">50% off your first month</div>
+      <div class="cta-g">No calls required upfront</div>
+      <div class="cta-g">No long-term contract</div>
+      <div class="cta-g">Delivered by the 15th, every month</div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section class="other-services">
+  <div class="container">
+    <div class="eyebrow fade-up" style="text-align:center;">Other services</div>
+    <h2 class="section-heading fade-up" style="text-align:center;">Other ways EcomKeeping can help</h2>
+    <div class="os-grid fade-up">
+      <div class="os-card">
+        <div class="os-icon">&#128269;</div>
+        <h4>Free Book Audit</h4>
+        <p>A free initial review of your QBO file, with written findings and recommended next steps. No changes made to your books.</p>
+        <a href="https://ecomkeeping.com/bookaudit" class="os-link">Learn more &#8594;</a>
+      </div>
+      <div class="os-card">
+        <div class="os-icon">&#128295;</div>
+        <h4>Cleanup and Catch-Up</h4>
+        <p>Catch up on overdue bookkeeping with a fixed quote and timeframe agreed after reviewing your file. From $360.</p>
+        <a href="https://ecomkeeping.com/cleanup" class="os-link">Learn more &#8594;</a>
+      </div>
+      <div class="os-card">
+        <div class="os-icon">&#9881;</div>
+        <h4>QuickBooks Online + A2X Setup</h4>
+        <p>Your QBO file built from scratch and configured for e-commerce. The right foundation before monthly work begins.</p>
+        <a href="mailto:emmanuel@ecomkeeping.com" class="os-link">Get a quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="pf-brand">Ecom<span>Keeping</span></div>
+  <div class="pf-links">
+    <a href="https://ecomkeeping.com">Home</a>
+    <a href="https://ecomkeeping.com/about">About</a>
+    <a href="https://ecomkeeping.com/bookaudit">Free Book Audit</a>
+    <a href="https://ecomkeeping.com/cleanup">Cleanup Service</a>
+    <a href="mailto:emmanuel@ecomkeeping.com">Contact</a>
+  </div>
+  <div class="pf-copy">&#169; 2026 EcomKeeping</div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
