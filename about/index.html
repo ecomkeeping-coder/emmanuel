@@ -2,379 +2,293 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Emmanuel Akam — EcomKeeping | E-commerce Bookkeeping Specialist</title>
-  <meta name="description" content="Emmanuel Akam built EcomKeeping around e-commerce from day one. A2X Certified, Intuit Certified, QuickBooks Online ProAdvisor. Specialist bookkeeping for Amazon FBA and Shopify sellers." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Emmanuel Akam | Ecommerce Bookkeeper | EcomKeeping</title>
+  <meta name="description" content="Meet Emmanuel Akam, founder of EcomKeeping. Specialist QuickBooks Online bookkeeping for US Amazon and Shopify sellers, including reconciliations, cleanup and monthly reporting." />
+  <link rel="canonical" href="https://ecomkeeping.com/about" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="EcomKeeping" />
+  <meta property="og:title" content="About Emmanuel Akam | Ecommerce Bookkeeper | EcomKeeping" />
+  <meta property="og:description" content="Meet Emmanuel Akam, founder of EcomKeeping. Specialist QuickBooks Online bookkeeping for US Amazon and Shopify sellers, including reconciliations, cleanup and monthly reporting." />
+  <meta property="og:url" content="https://ecomkeeping.com/about" />
+  <meta property="og:image" content="https://ecomkeeping.com/Founder_EcomKeeping..png" />
+  <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy: #1E3A8A; --navy-dark: #152c6b; --navy-mid: #2d4fa8;
-      --emerald: #10B981; --emerald-dark: #059669;
-      --white: #FFFFFF; --slate: #64748B; --slate-light: #94A3B8;
-      --charcoal: #1F2937; --light-bg: #F8FAFF; --border: #E2E8F0;
+      --blue: #2D3FCC; --navy: #0F1870; --emerald: #10B981; --emerald-dk: #047857;
+      --white: #FFFFFF; --charcoal: #1F2937; --slate: #4B5563; --bg: #F8FAFF; --border: #E2E8F0;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: var(--charcoal); background: var(--white); line-height: 1.65; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
-    a { text-decoration: none; color: inherit; }
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; color: var(--charcoal); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+    h1, h2, h3 { font-family: 'Montserrat', 'Inter', Arial, sans-serif; line-height: 1.2; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    :focus-visible { outline: 3px solid var(--emerald); outline-offset: 3px; border-radius: 4px; }
+    .skip { position: absolute; left: -9999px; top: 0; background: var(--navy); color: #fff; padding: .7rem 1rem; z-index: 200; }
+    .skip:focus { left: 8px; top: 8px; }
     .container { max-width: 1060px; margin: 0 auto; padding: 0 5%; }
-    .eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--emerald); margin-bottom: 0.5rem; }
-    .section-heading { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 0.8rem; letter-spacing: -0.02em; }
-    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-    .fade-up.visible { opacity: 1; transform: none; }
+    .narrow { max-width: 760px; }
+    section { padding: 80px 0; }
+    .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald-dk); margin-bottom: .6rem; }
+    .h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 800; color: var(--navy); letter-spacing: -.02em; margin-bottom: 1rem; }
+    .prose p { font-size: 1rem; color: var(--slate); margin-bottom: 1rem; }
+    .prose p.punch { color: var(--charcoal); font-weight: 600; }
 
-    nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 5%; height: 62px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.15rem; color: var(--navy); }
-    .nav-brand span { color: var(--emerald); }
-    .nav-back { font-size: 0.82rem; color: var(--slate); display: flex; align-items: center; gap: 0.35rem; transition: color 0.2s; }
-    .nav-back:hover { color: var(--navy); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .8rem 1.6rem; border-radius: 8px; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: .92rem; text-align: center; border: 2px solid transparent; cursor: pointer; transition: background .2s, transform .2s; }
+    .btn-primary { background: var(--emerald-dk); color: #fff; }
+    .btn-primary:hover { background: #065F46; transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
+    .btn-secondary:hover { background: rgba(255,255,255,.12); }
+    .btns { display: flex; gap: .9rem; flex-wrap: wrap; }
 
-    /* HERO */
-    .hero { background: linear-gradient(150deg, #0f2360 0%, var(--navy) 50%, #1a4ea8 100%); padding: 80px 5% 70px; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(16,185,129,0.1) 0%, transparent 60%); pointer-events: none; }
-    .hero-grid { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.8fr; gap: 4rem; align-items: center; position: relative; }
-    .hero-photo-wrap { position: relative; }
-    .hero-photo { width: 100%; aspect-ratio: 4/5; border-radius: 14px; object-fit: cover; object-position: top; display: block; }
-    .hero-cert-float { position: absolute; bottom: -0.8rem; right: -0.8rem; background: var(--white); border-radius: 9px; padding: 0.7rem 0.9rem; box-shadow: 0 4px 18px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 0.5rem; max-width: 190px; }
-    .cert-float-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
-    .cert-float-text { font-size: 0.72rem; font-weight: 600; color: var(--charcoal); line-height: 1.3; }
-    .hero-tag { display: inline-block; background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.35); color: #6EE7B7; border-radius: 4px; padding: 0.3rem 0.75rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
-    .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--white); line-height: 1.12; margin-bottom: 1.2rem; letter-spacing: -0.025em; }
-    .hero h1 em { color: var(--emerald); font-style: normal; }
-    .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.78; margin-bottom: 2rem; }
-    .hero-certs { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
-    .hero-cert-pill { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 50px; padding: 0.3rem 0.85rem; font-size: 0.76rem; font-weight: 600; color: rgba(255,255,255,0.85); }
-    .hero-cert-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; }
-    .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald); color: var(--white); padding: 0.85rem 2rem; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.95rem; box-shadow: 0 4px 20px rgba(16,185,129,0.4); transition: all 0.2s; }
-    .hero-cta:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+    header { background: #fff; border-bottom: 1px solid var(--border); }
+    .nav { max-width: 1060px; margin: 0 auto; padding: 0 5%; height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { font-family: 'Montserrat', Arial, sans-serif; font-weight: 900; font-size: 1.2rem; color: var(--navy); }
+    .brand span { color: var(--emerald-dk); }
+    .back { font-size: .9rem; font-weight: 500; color: var(--slate); min-height: 48px; display: inline-flex; align-items: center; }
+    .back:hover { color: var(--navy); }
 
-    /* STORY */
-    .story { padding: 80px 5%; background: var(--light-bg); }
-    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; margin-top: 2.5rem; }
-    .story-block h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 1rem; line-height: 1.3; }
-    .story-block p { font-size: 0.95rem; color: var(--slate); line-height: 1.8; margin-bottom: 0.9rem; }
-    .story-block p strong { color: var(--charcoal); font-weight: 600; }
+    /* Hero */
+    .hero { background: var(--navy); color: #fff; padding: 84px 0 76px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 25% 55%, rgba(45,63,204,.55), transparent 65%); pointer-events: none; }
+    .hero-grid { position: relative; display: grid; grid-template-columns: .8fr 1.4fr; gap: 3.5rem; align-items: center; }
+    .photo { border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 5; background: rgba(255,255,255,.08); max-width: 340px; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero .eyebrow { color: #6EE7B7; }
+    .hero h1 { font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 900; letter-spacing: -.025em; margin-bottom: 1.2rem; }
+    .hero p { font-size: 1.02rem; color: rgba(255,255,255,.88); margin-bottom: 1rem; max-width: 560px; }
+    .hero .btns { margin-top: 1.6rem; }
 
-    /* PHILOSOPHY */
-    .philosophy { padding: 80px 5%; background: var(--white); }
-    .phil-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; margin-top: 2.5rem; }
-    .phil-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.6rem; }
-    .phil-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; color: var(--emerald); opacity: 0.4; line-height: 1; margin-bottom: 0.5rem; }
-    .phil-card h4 { font-size: 0.92rem; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.3; }
-    .phil-card p { font-size: 0.82rem; color: var(--slate); line-height: 1.65; }
+    /* Story */
+    .alt { background: var(--bg); }
+    .story-lines p { margin-bottom: .8rem; }
 
-    /* CREDENTIALS */
-    .credentials { padding: 80px 5%; background: var(--navy); color: var(--white); }
-    .credentials .section-heading { color: var(--white); }
-    .creds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: start; }
-    .cert-cards { display: flex; flex-direction: column; gap: 1rem; }
-    .cert-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
-    .cert-card-icon { width: 46px; height: 46px; border-radius: 8px; overflow: hidden; flex-shrink: 0; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
-    .cert-card-icon img { width: 100%; height: 100%; object-fit: contain; }
-    .cert-card-body h4 { font-size: 0.88rem; margin-bottom: 0.2rem; }
-    .cert-card-body p { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
-    .creds-right p { font-size: 0.93rem; color: rgba(255,255,255,0.72); line-height: 1.78; margin-bottom: 1rem; }
-    .creds-right p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
-    .disclaimer { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.2rem 1.4rem; font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin-top: 1.5rem; }
+    /* How I work */
+    .work-list { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; margin-top: 2.2rem; }
+    .work-item { background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--blue); border-radius: 12px; padding: 1.5rem; }
+    .work-item .n { width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: .9rem; }
+    .work-item h3 { font-size: 1rem; color: var(--navy); margin-bottom: .6rem; }
+    .work-item p { font-size: .92rem; color: var(--slate); margin-bottom: .7rem; }
+    .work-item p:last-child { margin-bottom: 0; }
 
-    /* WHAT I AM / NOT */
-    .what-i-am { padding: 80px 5%; background: var(--light-bg); }
-    .wia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
-    .wia-col { border-radius: 12px; padding: 1.8rem; }
-    .wia-col.yes { background: #F0FDF9; border: 1px solid rgba(16,185,129,0.2); }
-    .wia-col.no { background: var(--white); border: 1px solid var(--border); }
-    .wia-col h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 1rem; }
-    .wia-col.yes h4 { color: var(--emerald-dark); }
-    .wia-col.no h4 { color: var(--slate); }
-    .wia-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .wia-list li { font-size: 0.84rem; display: flex; gap: 0.6rem; align-items: flex-start; line-height: 1.5; }
-    .wia-col.yes .wia-list li { color: #065F46; }
-    .wia-col.no .wia-list li { color: var(--slate); }
+    /* Qualifications */
+    .quals { background: var(--navy); color: #fff; }
+    .quals .eyebrow { color: #6EE7B7; }
+    .quals .h2 { color: #fff; }
+    .quals .intro { color: rgba(255,255,255,.88); margin-bottom: 1.6rem; }
+    .cert-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.8rem; }
+    .cert { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 12px; padding: 1.2rem 1.4rem; display: flex; gap: 1.1rem; align-items: center; }
+    .cert-img { width: 64px; height: 64px; flex-shrink: 0; background: #fff; border-radius: 10px; padding: 6px; display: flex; align-items: center; justify-content: center; }
+    .cert-img img { width: 100%; height: 100%; object-fit: contain; }
+    .cert h3 { font-size: .98rem; margin-bottom: .2rem; }
+    .cert p { font-size: .88rem; color: rgba(255,255,255,.85); }
+    .quals p.note { color: rgba(255,255,255,.88); margin-bottom: 1rem; }
 
-    /* SERVICES */
-    .services-section { padding: 80px 5%; background: var(--white); }
-    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
-    .svc-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: all 0.2s; display: flex; flex-direction: column; }
-    .svc-card:hover { box-shadow: 0 4px 20px rgba(30,58,138,0.1); transform: translateY(-2px); }
-    .svc-card-icon { font-size: 1.3rem; margin-bottom: 0.7rem; }
-    .svc-card h4 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.4rem; }
-    .svc-card p { font-size: 0.82rem; color: var(--slate); line-height: 1.6; flex: 1; margin-bottom: 1.2rem; }
-    .svc-link { font-size: 0.82rem; font-weight: 600; color: var(--emerald); display: inline-flex; align-items: center; gap: 0.3rem; transition: gap 0.2s; }
-    .svc-link:hover { gap: 0.5rem; }
+    /* Working with */
+    .help-list { list-style: none; margin: 1rem 0 1.4rem; display: flex; flex-direction: column; gap: .6rem; }
+    .help-list li { display: flex; gap: .7rem; align-items: flex-start; color: var(--charcoal); font-size: .98rem; }
+    .help-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--emerald-dk); flex-shrink: 0; margin-top: .6rem; }
+    .scope-note { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; font-size: .95rem; color: var(--slate); }
 
-    /* CTA */
-    .cta-section { padding: 90px 5%; background: linear-gradient(150deg, #0f2360 0%, var(--navy) 60%, #1a4ea8 100%); text-align: center; }
-    .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: var(--white); margin-bottom: 1rem; letter-spacing: -0.02em; line-height: 1.2; }
-    .cta-section h2 em { color: var(--emerald); font-style: normal; }
-    .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
-    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--emerald); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.05rem; box-shadow: 0 4px 28px rgba(16,185,129,0.5); transition: all 0.2s; }
-    .cta-btn:hover { background: var(--emerald-dark); transform: translateY(-2px); }
+    /* Final */
+    .final { background: linear-gradient(150deg, var(--navy), var(--blue)); color: #fff; text-align: center; }
+    .final .h2 { color: #fff; }
+    .final p.body { max-width: 580px; margin: 0 auto 1.8rem; color: rgba(255,255,255,.9); }
+    .final .btns { justify-content: center; }
+    .cta-note { font-size: .88rem; color: rgba(255,255,255,.8); margin-top: 1rem; }
 
-    /* FOOTER */
-    .page-footer { background: var(--charcoal); padding: 1.8rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
-    .pf-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
-    .pf-brand span { color: var(--emerald); }
-    .pf-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .pf-links a { font-size: 0.78rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
-    .pf-links a:hover { color: var(--emerald); }
-    .pf-copy { font-size: 0.72rem; color: rgba(255,255,255,0.35); }
+    footer { background: var(--charcoal); color: rgba(255,255,255,.85); padding: 2.4rem 0 1.8rem; font-size: .88rem; }
+    .foot { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.4rem; align-items: flex-start; }
+    .foot .brand { color: #fff; display: block; margin-bottom: .4rem; }
+    .foot .brand span { color: var(--emerald); }
+    .foot ul { list-style: none; display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; }
+    .foot ul a { display: inline-block; padding: .5rem 0; color: rgba(255,255,255,.85); }
+    .foot a:hover { color: #6EE7B7; }
+    .copy { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.2rem; font-size: .8rem; color: rgba(255,255,255,.7); }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-photo-wrap { max-width: 280px; }
-      .creds-grid { grid-template-columns: 1fr; }
-      .phil-grid, .svc-grid { grid-template-columns: 1fr 1fr; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+      .photo { max-width: 260px; }
+      .work-list { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
-      .story-grid, .wia-grid { grid-template-columns: 1fr; }
-      .hero { padding: 60px 4% 50px; }
+      section { padding: 56px 0; }
+      .hero { padding: 56px 0 52px; }
+      .btns .btn { width: 100%; }
+      .cert { flex-direction: row; padding: 1rem; }
+      .cert-img { width: 54px; height: 54px; }
     }
-    @media (max-width: 560px) {
-      .phil-grid, .svc-grid { grid-template-columns: 1fr; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 
-<nav>
-  <div class="nav-brand">Ecom<span>Keeping</span></div>
-  <a href="https://ecomkeeping.com" class="nav-back">&#8592; Back to main site</a>
-</nav>
-
-<!-- HERO — EDITED -->
-<section class="hero">
-  <div class="hero-grid">
-    <div class="hero-photo-wrap fade-up">
-      <img src="https://ecomkeeping.com/Founder_EcomKeeping..png" alt="Emmanuel Akam" class="hero-photo" />
-      <div class="hero-cert-float">
-        <div class="cert-float-dot"></div>
-        <div class="cert-float-text">A2X Certified E-commerce Bookkeeper</div>
-      </div>
-    </div>
-    <div class="hero-text">
-      <div class="hero-tag">E-commerce Bookkeeping Specialist</div>
-      <h1>I did not adapt to e-commerce. I <em>started</em> here.</h1>
-      <p class="hero-desc">
-        I am Emmanuel Akam. I run EcomKeeping from Lagos, Nigeria, working exclusively with
-        Amazon FBA and Shopify sellers. I chose that specialisation before I had a single client,
-        trained for it, and built the practice around it.
-      </p>
-      <div class="hero-certs">
-        <div class="hero-cert-pill">Intuit Certified Bookkeeper</div>
-        <div class="hero-cert-pill">A2X Certified Bookkeeper</div>
-        <div class="hero-cert-pill">QuickBooks Online ProAdvisor</div>
-      </div>
-      <a href="https://scheduler.zoom.us/emmanuel-ecomkeeping/discovery-call" class="hero-cta">Schedule a Call</a>
-    </div>
+<header>
+  <div class="nav">
+    <a class="brand" href="https://ecomkeeping.com" aria-label="EcomKeeping home">Ecom<span>Keeping</span></a>
+    <a class="back" href="https://ecomkeeping.com">&larr; Back to Home</a>
   </div>
-</section>
+</header>
 
-<!-- STORY — EDITED -->
-<section class="story">
-  <div class="container">
-    <div class="eyebrow fade-up">My story</div>
-    <h2 class="section-heading fade-up">How EcomKeeping was built</h2>
-    <div class="story-grid">
-      <div class="story-block fade-up">
-        <h3>Where it started</h3>
-        <p>I am an accounting person at heart, but everything I first learned about accounting assumed you were physically in the room. Cloud accounting changed that. I got Intuit Bookkeeping Certified, then QBO ProAdvisor certified, and started looking for clients.</p>
-        <p>General bookkeeping turned out to be crowded. Everyone offered the same thing to everyone. I kept hitting walls.</p>
+<main id="main">
+  <!-- Section 1: Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="photo">
+        <img src="https://ecomkeeping.com/Founder_EcomKeeping..png" alt="Emmanuel Akam, founder of EcomKeeping" width="340" height="425" />
       </div>
-      <div class="story-block fade-up">
-        <h3>Why I picked one niche</h3>
-        <p>Then I found the firms doing e-commerce bookkeeping only. Not full accounting, not tax filing. Just bookkeeping, for one type of business. <strong>That is when it clicked.</strong> You do not need to offer everything. You need to do one thing extremely well for one type of client.</p>
-        <p>So I studied A2X, got certified, and learned what e-commerce bookkeeping actually looks like in practice: settlement mapping, clearing accounts, COGS for inventory businesses, sales tax nexus. Then I built my own practice instead of waiting for someone to hire me.</p>
-        <p>That is what EcomKeeping is. A solo practice, capped at 10 clients, built for Amazon FBA and Shopify sellers. <strong>Not a firm that handles everyone.</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHILOSOPHY — UNTOUCHED -->
-<section class="philosophy">
-  <div class="container">
-    <div class="eyebrow fade-up">What I believe</div>
-    <h2 class="section-heading fade-up">The principles behind how I work</h2>
-    <div class="phil-grid fade-up">
-      <div class="phil-card">
-        <div class="phil-num">01</div>
-        <h4>A2X automates data transfer. It does not replace judgment.</h4>
-        <p>The software moves the data. Knowing whether a settlement posted correctly, whether COGS reflects a recent cost change, and whether the Balance Sheet makes sense still takes a trained person paying attention.</p>
-      </div>
-      <div class="phil-card">
-        <div class="phil-num">02</div>
-        <h4>Your books should tell an accurate story every month, not just satisfy a CPA once a year.</h4>
-        <p>Pricing decisions made from a P&amp;L where net deposits are booked as revenue are decisions made on fiction.</p>
-      </div>
-      <div class="phil-card">
-        <div class="phil-num">03</div>
-        <h4>Transparency builds more durable trust than inflated claims.</h4>
-        <p>My credentials are real and my training is real. What I claim on this site is what I can actually deliver, not what sounds most convincing.</p>
-      </div>
-      <div class="phil-card">
-        <div class="phil-num">04</div>
-        <h4>Serving fewer clients well is worth more than serving many clients adequately.</h4>
-        <p>A practice capped at 10 clients gives each one something a high-volume firm cannot: actual attention. When something needs looking at, you hear about it the same day.</p>
-      </div>
-      <div class="phil-card">
-        <div class="phil-num">05</div>
-        <h4>Part of this job is education, not just execution.</h4>
-        <p>A seller who understands their gross margin makes better decisions than one who just receives a PDF. The Loom walkthroughs are part of the service, not an extra.</p>
-      </div>
-      <div class="phil-card">
-        <div class="phil-num">06</div>
-        <h4>Refer to professionals when the work is outside scope.</h4>
-        <p>I am a bookkeeper, not a CPA, tax preparer, or sales tax filing specialist. When you need one of those, I say so and help you get there with clean books.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS — cert cards untouched, right side edited -->
-<section class="credentials">
-  <div class="container">
-    <div class="eyebrow fade-up" style="color:var(--emerald);">Credentials</div>
-    <h2 class="section-heading fade-up" style="color:var(--white);margin-top:0.4rem;">What I am trained and certified in</h2>
-    <div class="creds-grid">
-      <div class="cert-cards fade-up">
-        <div class="cert-card">
-          <div class="cert-card-icon"><img src="https://ecomkeeping.com/intuit-badge.png" alt="Intuit Certified Bookkeeper" /></div>
-          <div class="cert-card-body">
-            <h4>Intuit Certified Bookkeeper</h4>
-            <p>Foundational accounting and bookkeeping principles with real business application. Formal assessment required.</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card-icon"><img src="https://ecomkeeping.com/A2X_badge-certified.png" alt="A2X Certified E-commerce Bookkeeper" /></div>
-          <div class="cert-card-body">
-            <h4>A2X Certified E-commerce Bookkeeper</h4>
-            <p>Trained specifically on Amazon and Shopify settlement mapping, clearing accounts, and reconciliation workflows.</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card-icon"><img src="https://ecomkeeping.com/qbo-badge.png" alt="QuickBooks Online ProAdvisor" /></div>
-          <div class="cert-card-body">
-            <h4>QuickBooks Online ProAdvisor</h4>
-            <p>QBO setup, account management, reconciliation, and financial reporting. The core platform every client file runs on.</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card-icon"><img src="https://ecomkeeping.com/intuit-proadvisor-badge-tier-silver.png" alt="Intuit ProAdvisor Silver" /></div>
-          <div class="cert-card-body">
-            <h4>Intuit ProAdvisor Silver</h4>
-            <p>Recognition for completion of multiple certifications within the QuickBooks ecosystem.</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card-icon"><img src="https://ecomkeeping.com/qbo-cas.png" alt="Client Advisory Services Graduate" /></div>
-          <div class="cert-card-body">
-            <h4>Client Advisory Services Graduate</h4>
-            <p>Covers client communication, advisory frameworks, and financial reporting for service-based practices.</p>
-          </div>
-        </div>
-      </div>
-      <div class="creds-right fade-up">
-        <p>Every one of these came from a structured training program with a formal assessment. Not participation badges.</p>
-        <p>The one I point to first is the <strong>Intuit Bookkeeping Certification</strong>, which covers foundational accounting principles and real business application.</p>
-        <p>The E-commerce Accounting Mastery course I completed covers Amazon FBA, Shopify, US sales tax nexus, COGS for inventory businesses, and QBO as an integrated system. Not the standard path, but the right one for the only clients I work with.</p>
-        <p><strong>I am not a CPA.</strong> I do not file tax returns or give tax and legal advice. I do e-commerce bookkeeping, and when the work goes past that I point you to the right professional with clean books in hand.</p>
-        <div class="disclaimer">
-          EcomKeeping is a specialist bookkeeping service. I am not a CPA, tax preparer, or licensed accountant. This service does not constitute tax or legal advice. For tax preparation, filing, and planning, please consult a licensed CPA or tax professional.
+      <div>
+        <p class="eyebrow">Meet the person behind EcomKeeping</p>
+        <h1 id="hero-title">Hi, I'm Emmanuel. I specialize in ecommerce bookkeeping.</h1>
+        <p>I'm the founder of EcomKeeping, a small bookkeeping practice focused on US-based Amazon and Shopify businesses.</p>
+        <p>I help business owners keep their sales, payouts, fees, and inventory costs properly recorded in QuickBooks Online, so they can understand their numbers without having to untangle everything themselves.</p>
+        <p>I'm based in Lagos, Nigeria, and work remotely with US ecommerce businesses.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://scheduler.zoom.us/emmanuel-ecomkeeping/discovery-call">Book a Clarity Call</a>
+          <a class="btn btn-secondary" href="https://ecomkeeping.com/bookaudit">Request a Free Bookkeeping Review</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHAT I AM / NOT — EDITED -->
-<section class="what-i-am">
+  <!-- Section 2: My story -->
+  <section class="alt" aria-labelledby="story-title">
+    <div class="container narrow prose">
+      <p class="eyebrow">My story</p>
+      <h2 class="h2" id="story-title">Why I chose ecommerce bookkeeping</h2>
+      <p>I started with general bookkeeping and accounting, learning how financial records come together and why accurate reporting matters.</p>
+      <p>As I learned more about ecommerce, I noticed something different about how these businesses operate.</p>
+      <p>An Amazon seller might make thousands in sales but receive a much smaller deposit after fees, refunds, and other adjustments. Shopify sellers have their own payout arrangements, and inventory adds another layer to the accounting.</p>
+      <p class="punch">Recording the bank deposit alone doesn't tell the full story.</p>
+      <p>That caught my attention.</p>
+      <p>I wanted to understand how these transactions move from the sales platforms into the books and how to reconcile them properly.</p>
+      <p>So I focused my training on ecommerce bookkeeping, QuickBooks Online, and A2X, and eventually built EcomKeeping around the work.</p>
+      <p>Today, that's still my focus: helping ecommerce businesses maintain accurate records and understand what their financial reports are telling them.</p>
+    </div>
+  </section>
+
+  <!-- Section 3: How I work -->
+  <section aria-labelledby="work-title">
+    <div class="container">
+      <p class="eyebrow">How I work</p>
+      <h2 class="h2" id="work-title">A practical approach to your books</h2>
+      <ol class="work-list">
+        <li class="work-item">
+          <div class="n" aria-hidden="true">1</div>
+          <h3>I understand your business first.</h3>
+          <p>Before recommending anything, I want to understand where your sales happen, how customers pay, which systems you use, and how everything currently gets recorded.</p>
+        </li>
+        <li class="work-item">
+          <div class="n" aria-hidden="true">2</div>
+          <h3>I look beyond the bank deposits.</h3>
+          <p>A payout isn't the same as a sale. I pay attention to the sales, refunds, fees, transfers, and other transactions behind the money reaching your bank.</p>
+          <p>I also look at inventory and cost of goods sold, because revenue alone doesn't tell you how profitable your business is.</p>
+        </li>
+        <li class="work-item">
+          <div class="n" aria-hidden="true">3</div>
+          <h3>I keep things clear.</h3>
+          <p>You shouldn't have to be an accountant to understand your own reports.</p>
+          <p>My goal is to give you organized financial records, explain important findings in plain English, and let you know when something needs attention.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Section 4: Qualifications -->
+  <section class="quals" aria-labelledby="quals-title">
+    <div class="container narrow">
+      <p class="eyebrow">My qualifications</p>
+      <h2 class="h2" id="quals-title">Trained specifically for the work I do</h2>
+      <p class="intro">My professional training includes:</p>
+      <ul class="cert-list">
+        <li class="cert">
+          <div class="cert-img"><img src="https://ecomkeeping.com/qbo-badge.png" alt="QuickBooks Online Certified badge" width="52" height="52" loading="lazy" /></div>
+          <div>
+            <h3>QuickBooks Online Certified</h3>
+            <p>QuickBooks setup, bookkeeping, reconciliations, and reporting.</p>
+          </div>
+        </li>
+        <li class="cert">
+          <div class="cert-img"><img src="https://ecomkeeping.com/A2X_badge-certified.png" alt="A2X Certified Ecommerce Bookkeeper badge" width="52" height="52" loading="lazy" /></div>
+          <div>
+            <h3>A2X Certified Ecommerce Bookkeeper</h3>
+            <p>Ecommerce settlement accounting and integration workflows.</p>
+          </div>
+        </li>
+        <li class="cert">
+          <div class="cert-img"><img src="https://ecomkeeping.com/intuit-badge.png" alt="Intuit Bookkeeping Certified badge" width="52" height="52" loading="lazy" /></div>
+          <div>
+            <h3>Intuit Bookkeeping Certified</h3>
+            <p>Foundational bookkeeping and accounting principles.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="note">I'm also an <strong>ACCA student</strong>, continuing to develop my accounting knowledge alongside my practical work.</p>
+      <p class="note">I use tools like QuickBooks Online and A2X to make the process more efficient, but software doesn't replace reviewing the transactions and understanding whether the numbers make sense.</p>
+    </div>
+  </section>
+
+  <!-- Section 5: Working with EcomKeeping -->
+  <section class="alt" aria-labelledby="with-title">
+    <div class="container narrow prose">
+      <p class="eyebrow">Working with EcomKeeping</p>
+      <h2 class="h2" id="with-title">You work directly with me.</h2>
+      <p>EcomKeeping is a solo bookkeeping practice.</p>
+      <p>When you get in touch, I'm the person you speak with, the person reviewing your books, and the person responsible for the work we agree on.</p>
+      <p>I keep the practice focused because I want to understand each client's business rather than simply process transactions.</p>
+      <p class="punch">Here's where I can help:</p>
+      <ul class="help-list">
+        <li>Monthly ecommerce bookkeeping and reconciliations.</li>
+        <li>Cleanup and catch-up bookkeeping.</li>
+        <li>QuickBooks Online and ecommerce integration support.</li>
+        <li>Bookkeeping reviews and diagnostics.</li>
+        <li>Inventory and cost of goods sold bookkeeping.</li>
+      </ul>
+      <p class="scope-note">I focus on bookkeeping. For tax preparation, filing, or specialized tax advice, your CPA or tax professional handles that side.</p>
+    </div>
+  </section>
+
+  <!-- Section 6: Final CTA -->
+  <section class="final" aria-labelledby="final-title">
+    <div class="container">
+      <h2 class="h2" id="final-title">Want to know where your books stand?</h2>
+      <p class="body">Whether you're behind on bookkeeping, unsure about your current numbers, or looking for someone to handle the monthly work, I'm happy to understand what's happening and see where I can help.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://scheduler.zoom.us/emmanuel-ecomkeeping/discovery-call">Book a Clarity Call</a>
+        <a class="btn btn-secondary" href="https://ecomkeeping.com/bookaudit">Request a Free Bookkeeping Review</a>
+      </div>
+      <p class="cta-note">No pressure to commit. We'll start by understanding what your business needs.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
   <div class="container">
-    <div class="eyebrow fade-up">Honest positioning</div>
-    <h2 class="section-heading fade-up">What I am and what I am not</h2>
-    <div class="wia-grid fade-up">
-      <div class="wia-col yes">
-        <h4>What I am</h4>
-        <ul class="wia-list">
-          <li>&#10003;&nbsp; A specialist ecommerce bookkeeper, not a generalist</li>
-          <li>&#10003;&nbsp; Intuit Certified, A2X Certified, and QBO ProAdvisor</li>
-          <li>&#10003;&nbsp; Trained ecommerce-first, not adapted from general accounting</li>
-          <li>&#10003;&nbsp; Transparent about my credentials and the stage this practice is at</li>
-          <li>&#10003;&nbsp; Someone who explains your numbers, not just records them</li>
-          <li>&#10003;&nbsp; Available 8:00 to 17:00 UTC, Monday to Friday</li>
+    <div class="foot">
+      <div>
+        <span class="brand">Ecom<span>Keeping</span></span>
+        <p>Ecommerce bookkeeping for Amazon and Shopify sellers.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="https://ecomkeeping.com">Home</a></li>
+          <li><a href="https://ecomkeeping.com/bookaudit">Free Bookkeeping Review</a></li>
+          <li><a href="https://ecomkeeping.com/monthly">Monthly Bookkeeping</a></li>
+          <li><a href="https://ecomkeeping.com/cleanup">Cleanup &amp; Catch-Up</a></li>
+          <li><a href="mailto:emmanuel@ecomkeeping.com">Contact</a></li>
         </ul>
-      </div>
-      <div class="wia-col no">
-        <h4>What I am not</h4>
-        <ul class="wia-list">
-          <li>&#10007;&nbsp; A CPA or tax preparer (refer to your CPA)</li>
-          <li>&#10007;&nbsp; A sales tax filing specialist (refer to a sales tax pro)</li>
-          <li>&#10007;&nbsp; A payroll processor (refer to Gusto or ADP)</li>
-          <li>&#10007;&nbsp; A CFO or financial strategist</li>
-          <li>&#10007;&nbsp; A virtual assistant or general admin support</li>
-          <li>&#10007;&nbsp; A high-volume firm managing hundreds of files</li>
-        </ul>
-      </div>
+      </nav>
     </div>
+    <p class="copy">&copy; 2026 EcomKeeping</p>
   </div>
-</section>
-
-<!-- SERVICES — UNTOUCHED -->
-<section class="services-section">
-  <div class="container">
-    <div class="eyebrow fade-up">What EcomKeeping offers</div>
-    <h2 class="section-heading fade-up">Services built for Amazon FBA and Shopify sellers</h2>
-    <div class="svc-grid fade-up">
-      <div class="svc-card">
-        <div class="svc-card-icon">&#128269;</div>
-        <h4>Free Book Audit</h4>
-        <p>An 8-area review of your QuickBooks file with a written findings report in 24 hours. Free, read-only, no obligation.</p>
-        <a href="https://ecomkeeping.com/bookaudit" class="svc-link">Learn more &#8594;</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-card-icon">&#128200;</div>
-        <h4>Monthly Bookkeeping</h4>
-        <p>The full monthly close. P&amp;L, Balance Sheet, Cash Flow, KPI dashboard, and a Loom walkthrough by the 15th every month. From $449.</p>
-        <a href="https://ecomkeeping.com/monthly" class="svc-link">See plans and pricing &#8594;</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-card-icon">&#128295;</div>
-        <h4>Cleanup and Catch-Up</h4>
-        <p>Any backlog cleared at a fixed price, full deliverables package in 3 to 9 business days. From $360.</p>
-        <a href="https://ecomkeeping.com/cleanup" class="svc-link">Learn more &#8594;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA — EDITED -->
-<section class="cta-section">
-  <div class="container">
-    <h2 class="fade-up">Your books should not be <em>a problem you ignore</em>.</h2>
-    <p class="fade-up">Book a free 30-minute call, or skip it and go straight to the free audit of your QBO file. No pitch either way.</p>
-    <a href="https://scheduler.zoom.us/emmanuel-ecomkeeping/discovery-call" class="cta-btn fade-up">Book a Free Call</a>
-  </div>
-</section>
-
-<footer class="page-footer">
-  <div class="pf-brand">Ecom<span>Keeping</span></div>
-  <div class="pf-links">
-    <a href="https://ecomkeeping.com">Home</a>
-    <a href="https://ecomkeeping.com/monthly">Monthly Bookkeeping</a>
-    <a href="https://ecomkeeping.com/bookaudit">Free Book Audit</a>
-    <a href="https://ecomkeeping.com/cleanup">Cleanup Service</a>
-    <a href="mailto:emmanuel@ecomkeeping.com">Contact</a>
-  </div>
-  <div class="pf-copy">&#169; 2026 EcomKeeping</div>
 </footer>
-
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
 </body>
 </html>
