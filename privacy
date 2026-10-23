@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Notice | EcomKeeping</title>
+  <meta name="description" content="How EcomKeeping uses personal information for its website, business enquiries and business-contact research." />
+  <link rel="canonical" href="https://ecomkeeping.com/privacy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue:#2D3FCC; --navy:#0F1870; --emerald:#10B981; --emerald-dk:#047857; --white:#FFFFFF; --charcoal:#1F2937; --slate:#4B5563; --bg:#F8FAFF; --border:#E2E8F0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body { font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; color:var(--charcoal); background:var(--white); line-height:1.65; overflow-x:hidden; }
+    h1, h2, h3 { font-family:'Montserrat','Inter',Arial,sans-serif; line-height:1.2; }
+    a { color:inherit; text-decoration:none; }
+    :focus-visible { outline:3px solid var(--emerald); outline-offset:3px; border-radius:4px; }
+    .skip { position:absolute; left:-9999px; top:0; background:var(--navy); color:#fff; padding:.7rem 1rem; z-index:200; }
+    .skip:focus { left:8px; top:8px; }
+    .container { max-width:1060px; margin:0 auto; padding:0 5%; }
+    .eyebrow { font-size:.75rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#6EE7B7; margin-bottom:.6rem; }
+
+    header { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.97); border-bottom:1px solid var(--border); }
+    .nav { max-width:1060px; margin:0 auto; padding:0 5%; height:68px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { font-family:'Montserrat',Arial,sans-serif; font-weight:900; font-size:1.2rem; color:var(--navy); }
+    .brand span { color:var(--emerald-dk); }
+    .nav-links { display:flex; align-items:center; gap:1.8rem; list-style:none; }
+    .nav-links a { font-size:.9rem; font-weight:500; color:var(--slate); padding:.5rem 0; }
+    .nav-links a:hover { color:var(--navy); }
+    .nav-links .nav-cta { background:var(--emerald-dk); color:#fff; padding:.6rem 1.1rem; border-radius:8px; font-weight:600; }
+    .nav-links .nav-cta:hover { background:#065F46; color:#fff; }
+    .menu-btn { display:none; background:none; border:1px solid var(--border); border-radius:8px; min-width:48px; min-height:48px; cursor:pointer; align-items:center; justify-content:center; flex-direction:column; gap:5px; }
+    .menu-btn span { width:22px; height:2px; background:var(--navy); border-radius:2px; }
+
+    .page-hero { background:var(--navy); color:#fff; padding:64px 0 52px; }
+    .page-hero h1 { font-size:clamp(1.9rem,4vw,2.8rem); font-weight:900; letter-spacing:-.025em; margin-bottom:.6rem; }
+    .page-hero p { color:rgba(255,255,255,.85); }
+
+    .doc { max-width:760px; margin:0 auto; padding:56px 5% 80px; }
+    .doc h2 { font-size:1.3rem; font-weight:800; color:var(--navy); letter-spacing:-.01em; margin:2.4rem 0 .7rem; }
+    .doc p { margin-bottom:1rem; color:var(--charcoal); }
+    .doc ul { margin:0 0 1rem 1.3rem; }
+    .doc li { margin-bottom:.5rem; }
+    .doc a.link { color:var(--blue); text-decoration:underline; text-underline-offset:2px; }
+    .updated { font-size:.9rem; color:var(--slate); }
+
+    footer { background:var(--charcoal); color:rgba(255,255,255,.85); padding:2.6rem 0 1.8rem; font-size:.88rem; }
+    .foot { display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap; margin-bottom:1.6rem; }
+    .foot .brand { color:#fff; display:block; margin-bottom:.4rem; }
+    .foot .brand span { color:var(--emerald); }
+    .foot ul { list-style:none; display:flex; flex-wrap:wrap; gap:.3rem 1.4rem; }
+    .foot ul a { display:inline-block; padding:.5rem 0; color:rgba(255,255,255,.85); }
+    .foot a:hover { color:#6EE7B7; }
+    .copy { border-top:1px solid rgba(255,255,255,.15); padding-top:1.2rem; font-size:.8rem; color:rgba(255,255,255,.7); }
+
+    @media (max-width:768px) {
+      .js .menu-btn { display:flex; }
+      .js .nav-links { display:none; position:absolute; top:68px; left:0; right:0; background:#fff; flex-direction:column; align-items:stretch; gap:0; padding:.8rem 5% 1.2rem; border-bottom:1px solid var(--border); }
+      .js .nav-links.open { display:flex; }
+      .js .nav-links a { padding:.9rem 0; min-height:48px; display:flex; align-items:center; }
+      .js .nav-links .nav-cta { justify-content:center; margin-top:.6rem; }
+      .nav-links { gap:.9rem; font-size:.8rem; flex-wrap:wrap; }
+      .page-hero { padding:48px 0 40px; }
+      .doc { padding-top:40px; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="https://ecomkeeping.com/" aria-label="EcomKeeping home">Ecom<span>Keeping</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://ecomkeeping.com/#services">Services</a></li>
+      <li><a href="https://ecomkeeping.com/#how-it-works">How It Works</a></li>
+      <li><a href="https://ecomkeeping.com/about">About</a></li>
+      <li><a class="nav-cta" href="https://ecomkeeping.com/bookaudit">Request a Free Review</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="t">
+    <div class="container">
+      <p class="eyebrow">Privacy</p>
+      <h1 id="t">Privacy notice</h1>
+      <p>How I use personal information for my website, business enquiries and business-contact research.</p>
+    </div>
+  </section>
+
+  <article class="doc">
+    <p class="updated">Last updated: October 2026</p>
+
+    <h2>Who is responsible for your information</h2>
+    <p>EcomKeeping is the trading name I use for my bookkeeping work. I am Emmanuel Akam, an independent bookkeeper based in Lagos, Nigeria. I decide how personal information is used for my website, business enquiries and business-contact research.</p>
+    <p>You can contact me about your information at <a class="link" href="mailto:emmanuel@ecomkeeping.com">emmanuel@ecomkeeping.com</a>.</p>
+
+    <h2>Information I use</h2>
+    <p>Depending on how you interact with EcomKeeping, I may use your name, business email address, role, company details, the information you include in an enquiry, and our correspondence. For business-contact research, I may also use public information about your business, its products and sales channels. I do not need family, health or other sensitive information to decide whether to introduce my services.</p>
+    <p>Website infrastructure may process technical information, such as IP addresses, browser details, requested pages, dates and security events. Please do not send passwords, full banking credentials or unnecessary customer or employee records through an enquiry form or first email.</p>
+
+    <h2>Where information comes from</h2>
+    <p>I receive information directly when you email me, submit an enquiry or arrange a conversation. For business outreach, I may obtain business contact details from GojiBerry and review public company websites, business profiles, professional posts and company-register records. If an address comes from a company's published contact page, that page is the source. Public availability does not remove your privacy rights.</p>
+
+    <h2>Why I use it</h2>
+    <p>I use information to answer enquiries, discuss whether my bookkeeping services suit you, arrange agreed conversations, keep an accurate record of our correspondence, and protect the website and business systems. I may also use limited business-contact information to make a relevant introduction to my services.</p>
+    <p>Where UK data-protection law applies, the legal basis depends on the activity:</p>
+    <ul>
+      <li>Relevant business introductions and ordinary business-contact administration: legitimate interests in developing appropriate business relationships, where a documented assessment shows the use is necessary and proportionate and does not override your rights.</li>
+      <li>Steps you request before a contract, or work under a contract with you personally: taking those steps or performing the contract. For a company representative, the basis may instead be legitimate interests in managing the company's relationship.</li>
+      <li>Obligations imposed by law: compliance with the legal obligation.</li>
+      <li>Optional activities that need consent: your consent, which you can withdraw.</li>
+    </ul>
+    <p>I do not treat legitimate interests as a replacement for consent where electronic-marketing rules require it.</p>
+
+    <h2>Business emails and your choice</h2>
+    <p>If I contact you about bookkeeping, I aim to identify myself clearly and explain why your business appeared relevant. You can reply at any time to say you do not want further marketing from me. You do not need a special word or a reason.</p>
+    <p>If you object, I stop using your information for marketing and keep only the limited details needed to avoid contacting you again by mistake. A privacy notice, or an unanswered message, does not mean you have consented to further emails.</p>
+
+    <h2>Services involved in handling information</h2>
+    <p>I use Google Workspace for business email. The website uses GitHub and Cloudflare for development and delivery. Storing website code on GitHub does not mean enquiry or prospect data is kept in a public repository. Cloudflare may process technical connection and security information when delivering or protecting the website.</p>
+    <p>The website links to Zoom's scheduling service. If you choose to use it, Zoom also explains its own handling of your information. The booking details made available to me are used to arrange and respond to your enquiry.</p>
+    <p>Enquiries sent through the website form are handled by a third-party form service and delivered to me. I also use AI tools to help research businesses and draft messages, so those tools may process business-contact details that I enter. I try to enter only what is needed.</p>
+    <p>I may disclose information to professional advisers or public authorities where needed for legitimate advice, disputes or a legal obligation.</p>
+
+    <h2>International handling</h2>
+    <p>I work from Nigeria, so information I access and manage may be handled there. Technology providers may also process information in other countries. I do not promise that information stays in the UK.</p>
+
+    <h2>How long I keep it</h2>
+    <p>For an unanswered introduction, I delete or anonymise the working prospect record and related outreach correspondence within 90 days after the final message, unless a specific documented legal need requires longer. I review researched contacts not yet approached at least every 90 days and remove details I no longer need. For an enquiry that does not become an engagement, I normally delete the record within 12 months after the last meaningful exchange. If an engagement begins, I explain the client-record retention separately.</p>
+    <p>If you have asked not to receive marketing, I keep the minimum suppression record needed to prevent renewed contact and review periodically whether it is still needed. It is not used for marketing.</p>
+
+    <h2>Website cookies and similar technologies</h2>
+    <p>I do not currently use analytics, advertising cookies or tracking tools on this website, and I have not added a cookie banner. The site loads fonts from Google Fonts, so your browser sends a request, including your IP address, to Google when a page loads.</p>
+    <p>If you use the enquiry form or the Zoom scheduling link, those services may set their own cookies under their own policies. If I add analytics or similar tools later, I will update this notice and ask for consent where it is required.</p>
+
+    <h2>Your rights</h2>
+    <p>Where applicable, you can ask for access to your information, correction of inaccurate information, deletion or restriction, and you can object to processing. You can object to direct marketing at any time. Other rights, including portability and withdrawing consent, depend on the activity and the legal basis. I may need to confirm your identity before responding.</p>
+    <p>Email <a class="link" href="mailto:emmanuel@ecomkeeping.com">emmanuel@ecomkeeping.com</a> to make a request. If UK data-protection law applies, you can raise a concern with the Information Commissioner's Office at <a class="link" href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a>. You may also have rights under other data-protection laws, including where you live or where processing takes place.</p>
+
+    <h2>Changes</h2>
+    <p>I will update this notice when the way I handle information changes. The date at the top shows when this version was published.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <span class="brand">Ecom<span>Keeping</span></span>
+        <p>Ecommerce bookkeeping for Amazon and Shopify sellers.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="https://ecomkeeping.com/bookaudit">Free Bookkeeping Review</a></li>
+          <li><a href="https://ecomkeeping.com/monthly">Monthly Bookkeeping</a></li>
+          <li><a href="https://ecomkeeping.com/cleanup">Cleanup &amp; Catch-Up</a></li>
+          <li><a href="https://ecomkeeping.com/about">About</a></li>
+          <li><a href="https://ecomkeeping.com/privacy">Privacy</a></li>
+          <li><a href="mailto:emmanuel@ecomkeeping.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copy">&copy; 2026 EcomKeeping</p>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  (function () {
+    var btn = document.getElementById('menuBtn'), links = document.getElementById('navLinks');
+    if (!btn || !links) return;
+    function setOpen(o) { links.classList.toggle('open', o); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); btn.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); }
+    btn.addEventListener('click', function () { setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+    links.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setOpen(false); btn.focus(); } });
+  })();
+</script>
+</body>
+</html>
